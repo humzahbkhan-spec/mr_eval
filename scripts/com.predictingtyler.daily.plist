@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Predicting Tyler — daily pipeline (launchd user agent).
+  Install:
+    cp scripts/com.predictingtyler.daily.plist ~/Library/LaunchAgents/
+    launchctl load -w ~/Library/LaunchAgents/com.predictingtyler.daily.plist
+  Uninstall / pause:
+    launchctl unload -w ~/Library/LaunchAgents/com.predictingtyler.daily.plist
+  Run once now (to test):
+    launchctl start com.predictingtyler.daily
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.predictingtyler.daily</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/humzahkhan/Projects/mr_eval/scripts/run_daily.sh</string>
+  </array>
+
+  <!-- 09:00 local time daily. If the Mac is asleep then, launchd runs it on
+       the next wake (StartCalendarInterval catches up a missed occurrence). -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key><integer>9</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/humzahkhan/Projects/mr_eval/data/daily.launchd.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/humzahkhan/Projects/mr_eval/data/daily.launchd.log</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

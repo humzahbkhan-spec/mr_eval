@@ -1,12 +1,14 @@
 name: daily
 
-# Runs the pipeline once a day and after each run publishes the updated DB as a
-# rolling GitHub Release asset (data-latest) that the Streamlit dashboard reads.
-# The nudge commit at the end triggers Streamlit Cloud to redeploy with fresh data.
+# NOTE: the scheduled trigger is DISABLED. Substack (Cloudflare) blocks GitHub
+# Actions' datacenter IPs — a runner gets ~90% 403s on the feeds, while a
+# residential IP polls all 538 fine. So the daily pipeline runs on the Mac via
+# launchd (scripts/run_daily.sh + scripts/com.predictingtyler.daily.plist); see
+# DECISIONS.md D-39. This workflow is kept for manual runs and as the basis for a
+# future SELF-HOSTED runner (which would run on a non-blocked IP). To re-enable a
+# hosted schedule only if the IP problem is solved, restore the `schedule:` block.
 on:
-  schedule:
-    - cron: "0 13 * * *"        # 13:00 UTC daily (~9am ET)
-  workflow_dispatch: {}         # manual "Run workflow" button
+  workflow_dispatch: {}         # manual "Run workflow" button only
 
 permissions:
   contents: write               # manage releases + push the nudge commit
