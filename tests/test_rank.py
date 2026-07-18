@@ -181,6 +181,26 @@ def test_run_ranking_no_candidates_is_noop():
     assert conn.execute("SELECT COUNT(*) FROM runs").fetchone()[0] == 0
 
 
+def test_load_candidates_since_hours_filters_old():
+    from datetime import datetime, timedelta, timezone
+    conn = connect(":memory:")
+    init_schema(conn)
+    conn.execute("INSERT INTO publications (id, name, feed_url, canonical_domain, "
+                 "added_date, source, corpus_version, track) VALUES "
+                 "(1,'P','u','x.com','2026-01-01','manual','v1','substack')")
+    now = datetime.now(timezone.utc)
+    recent = (now - timedelta(hours=1)).isoformat()
+    old = (now - timedelta(days=30)).isoformat()
+    for cid, ing in ((1, recent), (2, old)):
+        conn.execute("INSERT INTO candidates (id, publication_id, url, canonical_url, "
+                     "published_at, ingested_at, raw_entry_json, track) VALUES "
+                     "(?,1,?,?,?,?,'{}','substack')", (cid, f"u{cid}", f"u{cid}", ing, ing))
+    conn.commit()
+    assert len(load_candidates(conn, "substack")) == 2                    # no filter
+    fresh = load_candidates(conn, "substack", since_hours=48)             # last 48h only
+    assert [c.id for c in fresh] == [1]
+
+
 def test_estimate_run_is_free_and_reports_cost():
     conn = connect(":memory:")
     init_schema(conn)

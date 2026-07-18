@@ -1,6 +1,10 @@
 # Raw feed/HTML/LLM response blobs — bulky, retained locally + in GH Actions artifacts.
-# The SQLite DB (data/tyler.db) IS committed, per brief §3.
 data/raw/
+
+# The SQLite DB is distributed as a rolling GitHub Release asset (data-latest),
+# NOT committed — keeps it out of git history. See DECISIONS.md D-38 (supersedes
+# D-13's commit-the-DB choice). The daily job publishes it; the dashboard downloads it.
+data/tyler.db
 
 # Transient run logs (tee'd output from ingest/watchlist runs)
 data/*.log

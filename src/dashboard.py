@@ -31,6 +31,47 @@ MODEL_NAMES = {"anthropic/claude-opus-4.8": "Claude Opus 4.8",
 
 # --- data -----------------------------------------------------------------
 
+def _secret(key: str, default: str = "") -> str:
+    import os
+    try:
+        if key in st.secrets:
+            return str(st.secrets[key])
+    except Exception:
+        pass
+    return os.environ.get(key, default)
+
+
+@st.cache_resource
+def ensure_db():
+    """Fetch tyler.db from the GitHub Release asset when there's no local copy.
+
+    Locally the DB is present (dev) and this is a no-op. On Streamlit Cloud the
+    DB is gitignored, so we download the rolling `data-latest` release asset that
+    the daily job publishes. A private repo needs GH_TOKEN as a Streamlit secret;
+    a public repo works without one.
+    """
+    if DB.exists():
+        return
+    import httpx
+    repo = _secret("GH_REPO", "humzahbkhan-spec/mr_eval")
+    tag = _secret("DB_RELEASE_TAG", "data-latest")
+    token = _secret("GH_TOKEN")
+    headers = {"Accept": "application/vnd.github+json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    with st.spinner("Loading the latest data…"):
+        rel = httpx.get(f"https://api.github.com/repos/{repo}/releases/tags/{tag}",
+                        headers=headers, timeout=30.0).json()
+        asset = next((a for a in rel.get("assets", []) if a["name"] == "tyler.db"), None)
+        if not asset:
+            st.error("No data release found yet — the daily job hasn't published one.")
+            st.stop()
+        blob = httpx.get(asset["url"], follow_redirects=True, timeout=180.0,
+                         headers={**headers, "Accept": "application/octet-stream"})
+        DB.parent.mkdir(parents=True, exist_ok=True)
+        DB.write_bytes(blob.content)
+
+
 @st.cache_resource
 def _conn():
     c = sqlite3.connect(f"file:{DB}?mode=ro", uri=True, check_same_thread=False)
@@ -125,6 +166,8 @@ def pretty_date(iso: str | None) -> str:
 st.set_page_config(page_title="Predicting Tyler", page_icon="📖",
                    layout="wide", initial_sidebar_state="collapsed")
 
+ensure_db()   # no-op locally; downloads the release asset on Streamlit Cloud
+
 st.markdown(f"""
 <style>
   #MainMenu, footer, [data-testid="stToolbar"], [data-testid="stDecoration"],
@@ -137,7 +180,7 @@ st.markdown(f"""
   .kicker {{ font-family: ui-monospace, 'SF Mono', Menlo, monospace; text-transform: uppercase;
     letter-spacing: .22em; font-size: .68rem; color: {ACCENT}; }}
   .dek {{ color: {MUTED}; font-size: 1.02rem; margin-top: .5rem; max-width: 62ch; }}
-  .more {{ margin-top: .55rem; font-size: .82rem; }}
+  .more {{ margin-top: .55rem; margin-bottom: 1.6rem; font-size: .82rem; }}
   .more a {{ font-family: ui-monospace, monospace; letter-spacing: .04em; }}
   .section-rule {{ font-family: ui-monospace, monospace; text-transform: uppercase;
     letter-spacing: .18em; font-size: .72rem; color: {MUTED}; border-top: 1px solid {RULE};
@@ -174,7 +217,7 @@ st.markdown(
     '<div class="dek">Each day, three models read the same fresh posts and rank what '
     'Tyler Cowen is most likely to link on Marginal Revolution. When he posts, we score '
     'them against his real picks.</div>'
-    '<div class="more"><a href="#about">How this works ↓</a></div>',
+    '<div class="more"><a href="#about">How this works</a></div>',
     unsafe_allow_html=True)
 
 track_label = ui.tabs(list(TRACKS), default_value="Substack", key="track")

@@ -1,0 +1,59 @@
+name: daily
+
+# Runs the pipeline once a day and after each run publishes the updated DB as a
+# rolling GitHub Release asset (data-latest) that the Streamlit dashboard reads.
+# The nudge commit at the end triggers Streamlit Cloud to redeploy with fresh data.
+on:
+  schedule:
+    - cron: "0 13 * * *"        # 13:00 UTC daily (~9am ET)
+  workflow_dispatch: {}         # manual "Run workflow" button
+
+permissions:
+  contents: write               # manage releases + push the nudge commit
+
+concurrency:                    # never let two daily runs overlap on the DB
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install
+        run: pip install -e .
+
+      - name: Fetch the current DB (seed from the release)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p data
+          gh release download data-latest -p tyler.db -D data --clobber \
+            || echo "No data-latest release yet — first run will create it."
+
+      - name: Run the daily pipeline
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m src.daily
+
+      - name: Publish the updated DB
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload data-latest data/tyler.db --clobber \
+            || gh release create data-latest data/tyler.db \
+                 --title "Latest data" --notes "Rolling tyler.db snapshot (updated daily)."
+
+      - name: Nudge the dashboard to redeploy
+        run: |
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > data/last_update.txt
+          git config user.name  "predicting-tyler-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/last_update.txt
+          git commit -m "data: daily update $(date -u +%F)" || echo "nothing to commit"
+          git push

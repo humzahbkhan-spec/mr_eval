@@ -1,0 +1,6 @@
+# Dependencies for the Streamlit Cloud dashboard ONLY (read-only app).
+# The daily pipeline (ingest/rank/score) installs the full set via `pip install -e .`
+# in CI — see pyproject.toml and .github/workflows/daily.yml.
+streamlit>=1.40,<2
+streamlit-shadcn-ui>=0.1.18,<0.2
+httpx>=0.27,<1
