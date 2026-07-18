@@ -1,0 +1,12 @@
+# Editorial theme — warm paper, oxblood accent, serif. Nothing like default
+# Streamlit (which is the point). See src/dashboard.py for the layout.
+[theme]
+base = "light"
+primaryColor = "#8C3A2B"           # oxblood accent
+backgroundColor = "#FAF8F3"        # warm paper
+secondaryBackgroundColor = "#F1ECE2"
+textColor = "#211C17"              # ink
+font = "serif"
+
+[server]
+headless = true

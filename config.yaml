@@ -39,17 +39,21 @@ candidate_body_words: 900
 allow_no_confident_picks: true
 
 # --- Matching & scoring --------------------------------------------------
-# Trailing window (days) in which a candidate must have been ranked to count
-# as an opportunity for a given Tyler pick.
-matching_window_days: 4
+# Trailing window (days) in which a Substack candidate must have been ranked to
+# count as an opportunity for a given Tyler pick. Set generously (7) rather than
+# empirically — Tyler links Substack posts on his own schedule, and the cost of a
+# too-wide window is small. Calibrate against measured Substack link-lag later if
+# we want to defend the exact number (D-37). (NBER has its own window: nber.*)
+matching_window_days: 7
 
 # When a candidate is ranked on multiple days in the window, this rule picks
 # which rank enters the metric. "best" = lowest rank number across days.
 cross_day_rank_aggregation: best
 
 # --- Ingestion -----------------------------------------------------------
-# Only pull feed entries published within this trailing window.
-ingest_lookback_hours: 48
+# Only pull feed entries published within this trailing window. 72h gives a
+# safety buffer over daily runs (a skipped run still catches the post). D-37.
+ingest_lookback_hours: 72
 
 # Consecutive fetch failures before a feed is marked inactive (does NOT bump
 # corpus_version — see METHODOLOGY.md).
