@@ -1,0 +1,79 @@
+# Few-shot examples — nber track (v1)
+
+75 real items Tyler Cowen linked on Marginal Revolution, in his own words (anchor + surrounding gloss from the archive). Deterministic quality-filtered, stratified-by-year sample; seed=42. Regenerate with `python -m src.build_fewshot`. See DECISIONS.md D-04/D-30.
+
+- NBER (2022-01-17): “ Under only the efficiency channel, the optimal minimum wage is narrowly around $8, robust to social welfare weights, and generates small welfare gains that recover only 2 percent of the efficiency losses from monopsony power. ”
+- NBER (2022-01-17): That is from a new NBER working paper by David Autor and many others.
+- NBER (2022-02-23): Matt Yglesias had an excellent (gated) Substack on this question lately, now Jeremy Greenwood, Nezih Guner and Karen A. Kopecky have a new and quite valuable paper . I found this to be the most interesting segment:
+- NBER (2022-03-03): That is from a new and important NBER working paper by Patrick J. Kehoe, Pierlauro Lopez, Virgiliu Midrigan, and Elena Pastorino. There is much more to their general model than that single sentence would indicate.
+- NBER (2022-03-14): That is from a new NBER working paper by Gustavo S. Cortes, Angela Vossmeyer, and Marc D. Weidenmier.
+- NBER (2022-03-22): New CBA for the child allowance, showing basically a 10x benefit to cost ratio .
+- NBER (2022-05-02): The Trump tariffs hurt Hollywood in China .
+- NBER (2022-05-09): Data and market power .
+- NBER (2022-05-23): That is from Michael Gilraine and Angela Zheng . Maybe you, like me, do not find any one of these studies to be a real clincher. But please do reread Alex on the sum total of the evidence …and here .
+- NBER (2022-08-01): College causally reduces smoking .
+- NBER (2022-08-29): Here is the full paper by George Bulman . Ahem! Amazing what a con they are pulling off…
+- NBER (2022-09-22): The problem they were trying to solve back in the ’30s was that up until that point, the way you got into, say, Dartmouth is the headmaster of Choate would write to Dartmouth and say, “Here’s our 15 candidates for Dartmouth.” Dartmouth…
+- NBER (2022-10-17): The Covid baby bump .
+- NBER (2022-11-22): That is from a new paper by Jessica Bai , Matthew Esche , W. Bentley MacLeod & Yifan Shi.
+- NBER (2022-12-26): That is from a new NBER working paper by Kristin Butcher, Patrick McEwan, and Akila Weerapana.
+- NBER (2023-01-16): That is from a new NBER working paper by Tyler Giles, Daniel M. Hungerman, and Tamar Oostrom. Ross Douthat, telephone!
+- NBER (2023-02-14): That is from a new NBER working paper by Jonathan Gruber, Thomas Kosonen, and Kristina Huttunen. Note that the results may irritate both some social conservatives and some proponents of extremely generous maternal leave arrangements.
+- NBER (2023-04-10): Does summer learning loss replicate? And on Covid learning loss recovery : “On average, we find that 20% of test score losses are recovered in English language arts (ELA) by 2022, compared to 37% in math.”
+- NBER (2023-04-10): That is from a new NBER working paper by Sara Markowitz and Andrew J.D. Smith.
+- NBER (2023-04-18): Here is the full NBER paper by Kristin F. Butcher , Patrick McEwan & Akila Weerapana . And here is a new paper about the value of HBCUs .
+- NBER (2023-04-18): Here is the full NBER paper by Kristin F. Butcher , Patrick McEwan & Akila Weerapana . And here is a new paper about the value of HBCUs .
+- NBER (2023-06-22): That is from a new paper by David J. Deming . You will note how this relates to the signaling vs. human capital debates over education. Signaling your quality may put you in a position to learn more over time, as your initial offer likely…
+- NBER (2023-07-04): That is from a new NBER working paper by José-Antonio Espín-Sánchez, Salvador Gil-Guirado, and Nicholas Ryan.
+- NBER (2023-07-14): That is from a new NBER working paper from Aline Bütikofer, Krzysztof Karbownik, and Fanny Landaud.
+- NBER (2023-07-27): Very important in my view. That is from a new NBER working paper by Sneha Lamba and Robert A. Moffitt.
+- NBER (2023-08-08): Here is the full paper . By the way, in case you are wondering I did write some columns arguing we should reopen the schools (and I strongly encouraged my own institution, GMU, to reopen in the fall of 2020, when asked for advice. Mercatus…
+- NBER (2023-08-29): That is from a new NBER working paper by Bocar A. Ba, Roman Rivera, and Alexander Whitefield.
+- NBER (2023-09-18): Economists write on using AI to boost scientific progress .
+- NBER (2023-10-04): The subtitle of this new NBER working paper is: Teamsters, Truckers, and Impending Innovations. Here is the abstract:
+- NBER (2023-10-16): As for the students themselves, recent research indicates that sports performance makes former student athletes more valuable in the workplace. Former college athletes are much more likely to enter the high-earning fields of business and…
+- NBER (2024-01-02): Monopsony amplifies distortions from progressive taxes .
+- NBER (2024-02-27): That is from a new NBER working paper by Marijn A. Bolhuis, Judd N.L. Cramer, Karl Oskar Schulz, and Lawrence H. Summers.
+- NBER (2024-02-29): That is from a new NBER working paper by Yan Bai, José-Víctor Ríos-Rull, and Kjetil Storesletten. Aggregate demand matters, but in a context-specific way. And demand and productivity shocks are part of one general integrated theory.
+- NBER (2024-03-04): “ Our findings suggest that lower returns increase inequality, which contradicts Piketty’s (2014) r-g formula. “
+- NBER (2024-03-18): How to network at unstructured happy hours .
+- NBER (2024-03-19): Long paper on how the grid is regulated, co-authored by an uncle of Matt Yglesias .
+- NBER (2024-04-30): That is from a new NBER working paper by Alessandro Caiumi and Giovanni Peri. I wouldn’t say I have massive trust in this kind of estimate. What I do notice, however, is the utter lack of countervailing real wage estimates that show…
+- NBER (2024-05-20): Yes the Fed is subject to political pressure .
+- NBER (2024-06-25): “ The rise of software accounts for two-thirds of the labor share decline in Korea between 1990 and 2018. ”
+- NBER (2024-07-09): That is from a new NBER working paper by Jaedo Choi, Andrei A. Levchenko, Dimitrije Ruzic, and Younghun Shim.
+- NBER (2024-07-19): Here is the underlying research by Gabriel Chodoros-Reich, Owen M. Zidar, and Eric Zwick. Note also this:
+- NBER (2024-09-18): That new paper is by Joao Guerreiro , Jonathon Hazell , Chen Lian & Christina Patterson . No slight intended to the co-authors, whom I do not know, but Hazell is one of the handful of best and most interesting young economists today…
+- NBER (2024-10-28): Microplastics go mainstream at the NBER .
+- NBER (2024-11-27): Bhattacharya also has researched the NIH itself (with Packalen), and here is one bit from that paper: “NIH’s propensity to fund projects that build on the most recent advances has declined over the last several decades. Thus, in this…
+- NBER (2024-12-23): That is from a recent NBER working paper by A. Kerem Coşar , Sophie Osotimehin & Latchezar Popov .
+- NBER (2025-02-05): Douglas Irwin on dismantling the Indian license raj . And Indians praying for visas under Trump . And podcast on Indian biotech potential .
+- NBER (2025-02-18): That is from a new NBER working paper by Pierre Azoulay & Wesley H. Greenblatt.
+- NBER (2025-03-12): That is from a new paper by Austan Goolsbee , Chad Syverson , Rebecca Goldgof & Joe Tatarka. A good paper, though I for one will note I consider the take-out experience (which I hardly ever do) to be a quality degradation.
+- NBER (2025-03-24): The economics of healthcare fraud .
+- NBER (2025-05-06): China’s One Child Policy lowered fertility more than we used to think .
+- NBER (2025-06-10): In other words, much of the discourse on this topic is quite off. That is from a new NBER working paper by Robert Kaestner, Anuj Gangopadhyaya, and Cuiping Schiman.
+- NBER (2025-06-30): Studying the emotional content of paintings over time .
+- NBER (2025-07-31): That is from a new NBER working paper by Gert Bijnens , Simon Jäger & Benjamin Schoefer . Here is my 2018 Bloomberg column on McKinsey .
+- NBER (2025-08-07): Economists write on China and sparrow eradication .
+- NBER (2025-08-08): That is from a new NBER working paper by Christopher Blattman, Scott Gehlbach, and Zeyang Yu.
+- NBER (2025-08-12): That is from a new NBER working paper by Lucas W. Davis and Paul Gertler. As of 2022, the rate of air conditioning access in Mexico was about 18.5%, only slightly less than that of Europe.
+- NBER (2025-09-16): That is from a new NBER working paper by Xugan Chen , Allen Hu & Song Ma .
+- NBER (2025-10-24): That is from a new NBER working paper by Aaron B. Flaaen , Ali Hortaçsu , Felix Tintelnot , Nicolás Urdaneta & Daniel Xu.
+- NBER (2025-12-08): That is from a new NBER working paper by Soeren J. Henn and James A. Robinson.
+- NBER (2025-12-13): That is from a new NBER working paper by Samuel Bazzi. As I have noted in the past, Indonesia remains a remarkably understudied and also undervisited country (Bali aside), so efforts in this direction should be appreciated.
+- NBER (2026-01-27): That is from a new NBER working paper by Milagros Onofri , Inés Berniell , Raquel Fernández & Azul Menduiña.
+- NBER (2026-02-03): And for older age groups, there is a new NBER working paper by David G. Blanchflower and Alex Bryson, excerpt:
+- NBER (2026-02-11): That is from a new NBER working paper by David C. Grabowski , Jonathan Gruber & Brian E. McGarry.
+- NBER (2026-02-12): That research result is from Javier Cravino , Andrei A. Levchenko , Francesc Ortega & Nitya Pandalai-Nayar .
+- NBER (2026-02-25): That is from Anton Korinek and Lee Lockwood .
+- NBER (2026-03-03): That is from a new NBER working paper by Kurt G. Lunsford and Kenneth D. West. If you do not know macro, here is a GPT translation in plainspeak . And this new paper suggests macro shocks do not matter that much.
+- NBER (2026-03-13): That is from a new NBER working paper by Bocar A. Ba .
+- NBER (2026-03-18): By Aidan Buehler, et.al., from a new NBER working paper .
+- NBER (2026-04-06): The real effects of nominal interest rates .
+- NBER (2026-04-18): That is from a new NBER working paper by Leander Andres , Stefan Bauernschuster , Gordon B. Dahl , Helmut Rainer & Simone Schüller .
+- NBER (2026-04-19): The subtitle of the paper is Puzzles, Patterns, and Possible Causes . Here is the abstract:
+- NBER (2026-04-22): Tariff increases are contractionary .
+- NBER (2026-04-23): That is from a new NBER working paper by David M. Cutler and Edward L. Glaeser, “How Have Universities Survived for Nearly a Millennium?” Has any single individual funded three equally prestigious chairs or anything close to that?
+- NBER (2026-05-12): That is from a recent NBER working paper by Henry Saffer.
+- NBER (2026-06-29): Using LLMs in economic history .

@@ -1,0 +1,4316 @@
+{
+  "dead_hosts": [
+    "emilyoster.substack.com",
+    "trustedtech.substack.com",
+    "karthiklogic.substack.com",
+    "support.substack.com",
+    "realimaginedprogress.substack.com"
+  ],
+  "generated_at": "2026-07-15",
+  "publications": [
+    {
+      "canonical_domain": "thezvi.substack.com",
+      "feed_url": "https://thezvi.substack.com/feed",
+      "link_count": 51,
+      "name": "Don't Worry About the Vase",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "arnoldkling.substack.com",
+      "feed_url": "https://arnoldkling.substack.com/feed",
+      "link_count": 44,
+      "name": "In My Tribe",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "scottsumner.substack.com",
+      "feed_url": "https://scottsumner.substack.com/feed",
+      "link_count": 41,
+      "name": "The Pursuit of Happiness",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "nicholasdecker.substack.com",
+      "feed_url": "https://nicholasdecker.substack.com/feed",
+      "link_count": 30,
+      "name": "Homo Economicus",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "hollisrobbinsanecdotal.substack.com",
+      "feed_url": "https://hollisrobbinsanecdotal.substack.com/feed",
+      "link_count": 20,
+      "name": "Anecdotal Value",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "constructionphysics.substack.com",
+      "feed_url": "https://constructionphysics.substack.com/feed",
+      "link_count": 19,
+      "name": "Construction Physics",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "richardhanania.substack.com",
+      "feed_url": "https://richardhanania.substack.com/feed",
+      "link_count": 17,
+      "name": "Richard Hanania's Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "betonit.substack.com",
+      "feed_url": "https://betonit.substack.com/feed",
+      "link_count": 17,
+      "name": "Bet On It",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "paulkrugman.substack.com",
+      "feed_url": "https://paulkrugman.substack.com/feed",
+      "link_count": 14,
+      "name": "Paul Krugman",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "astralcodexten.substack.com",
+      "feed_url": "https://astralcodexten.substack.com/feed",
+      "link_count": 13,
+      "name": "Astral Codex Ten",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "commonreader.substack.com",
+      "feed_url": "https://commonreader.substack.com/feed",
+      "link_count": 13,
+      "name": "The Common Reader",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "erictopol.substack.com",
+      "feed_url": "https://erictopol.substack.com/feed",
+      "link_count": 13,
+      "name": "Ground Truths",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "davidrozado.substack.com",
+      "feed_url": "https://davidrozado.substack.com/feed",
+      "link_count": 13,
+      "name": "Rozado\u2019s Visual Analytics",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "casssunstein.substack.com",
+      "feed_url": "https://casssunstein.substack.com/feed",
+      "link_count": 13,
+      "name": "Cass\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "srajagopalan.substack.com",
+      "feed_url": "https://srajagopalan.substack.com/feed",
+      "link_count": 12,
+      "name": "Get Down and Shruti",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "goodscience.substack.com",
+      "feed_url": "https://goodscience.substack.com/feed",
+      "link_count": 12,
+      "name": "The Good Science Project",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "forklightning.substack.com",
+      "feed_url": "https://forklightning.substack.com/feed",
+      "link_count": 12,
+      "name": "Forked Lightning",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "noahpinion.substack.com",
+      "feed_url": "https://noahpinion.substack.com/feed",
+      "link_count": 11,
+      "name": "Noahpinion",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kenopalo.substack.com",
+      "feed_url": "https://kenopalo.substack.com/feed",
+      "link_count": 9,
+      "name": "An Africanist Perspective",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "infovores.substack.com",
+      "feed_url": "https://infovores.substack.com/feed",
+      "link_count": 8,
+      "name": "a newsletter for infovores.",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "theendsdontjustifythemeans.substack.com",
+      "feed_url": "https://theendsdontjustifythemeans.substack.com/feed",
+      "link_count": 8,
+      "name": "the ends don't justify the means",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "benyeoh.substack.com",
+      "feed_url": "https://benyeoh.substack.com/feed",
+      "link_count": 7,
+      "name": "Ben Yeoh, Then Do Better",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "hyperdimensional.substack.com",
+      "feed_url": "https://hyperdimensional.substack.com/feed",
+      "link_count": 7,
+      "name": "Hyperdimensional",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "walkingtheworld.substack.com",
+      "feed_url": "https://walkingtheworld.substack.com/feed",
+      "link_count": 7,
+      "name": "Chris Arnade Walks the World",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "freaktakes.substack.com",
+      "feed_url": "https://freaktakes.substack.com/feed",
+      "link_count": 6,
+      "name": "FreakTakes",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thisweekinafrica.substack.com",
+      "feed_url": "https://thisweekinafrica.substack.com/feed",
+      "link_count": 6,
+      "name": "This Week in Africa",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "digitalspirits.substack.com",
+      "feed_url": "https://digitalspirits.substack.com/feed",
+      "link_count": 6,
+      "name": "Digital Spirits",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "resobscura.substack.com",
+      "feed_url": "https://resobscura.substack.com/feed",
+      "link_count": 6,
+      "name": "Res Obscura",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "nabeelqu.substack.com",
+      "feed_url": "https://nabeelqu.substack.com/feed",
+      "link_count": 6,
+      "name": "Nabeel S. Qureshi",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "frompovertytoprogress.substack.com",
+      "feed_url": "https://frompovertytoprogress.substack.com/feed",
+      "link_count": 6,
+      "name": "From Poverty to Progress",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "capitalismandfreedom.substack.com",
+      "feed_url": "https://capitalismandfreedom.substack.com/feed",
+      "link_count": 6,
+      "name": "The Capitalism and Freedom in the 21st Century Podcast",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "tedgioia.substack.com",
+      "feed_url": "https://tedgioia.substack.com/feed",
+      "link_count": 5,
+      "name": "The Honest Broker",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "brinklindsey.substack.com",
+      "feed_url": "https://brinklindsey.substack.com/feed",
+      "link_count": 5,
+      "name": "The Permanent Problem",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "rasheedgriffith.substack.com",
+      "feed_url": "https://rasheedgriffith.substack.com/feed",
+      "link_count": 5,
+      "name": "CPSI Newsletters",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "snowdentodd.substack.com",
+      "feed_url": "https://snowdentodd.substack.com/feed",
+      "link_count": 5,
+      "name": "Chasing Sheep",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "yearofbach.substack.com",
+      "feed_url": "https://yearofbach.substack.com/feed",
+      "link_count": 5,
+      "name": "A Year of Bach",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "aella.substack.com",
+      "feed_url": "https://aella.substack.com/feed",
+      "link_count": 5,
+      "name": "Knowingless",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "flyovertakes.substack.com",
+      "feed_url": "https://flyovertakes.substack.com/feed",
+      "link_count": 5,
+      "name": "Flyover Takes",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thepursuitofliberalism.substack.com",
+      "feed_url": "https://thepursuitofliberalism.substack.com/feed",
+      "link_count": 5,
+      "name": "The Pursuit of Liberalism",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "freesystems.substack.com",
+      "feed_url": "https://freesystems.substack.com/feed",
+      "link_count": 5,
+      "name": "Free Systems",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "adamtooze.substack.com",
+      "feed_url": "https://adamtooze.substack.com/feed",
+      "link_count": 4,
+      "name": "Chartbook",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "edwest.substack.com",
+      "feed_url": "https://edwest.substack.com/feed",
+      "link_count": 4,
+      "name": "Wrong Side of History",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "mysticalsilicon.substack.com",
+      "feed_url": "https://mysticalsilicon.substack.com/feed",
+      "link_count": 4,
+      "name": "Mystical Silicon",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "experimentalhistory.substack.com",
+      "feed_url": "https://experimentalhistory.substack.com/feed",
+      "link_count": 4,
+      "name": "Experimental History",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "vodoueconomics.substack.com",
+      "feed_url": "https://vodoueconomics.substack.com/feed",
+      "link_count": 4,
+      "name": "Vodou Economics",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "daviskedrosky.substack.com",
+      "feed_url": "https://daviskedrosky.substack.com/feed",
+      "link_count": 4,
+      "name": "Great Transformations",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "cactus.substack.com",
+      "feed_url": "https://cactus.substack.com/feed",
+      "link_count": 4,
+      "name": "From the New World",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "pmarca.substack.com",
+      "feed_url": "https://pmarca.substack.com/feed",
+      "link_count": 4,
+      "name": "Marc Andreessen Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "draliceevans.substack.com",
+      "feed_url": "https://draliceevans.substack.com/feed",
+      "link_count": 4,
+      "name": "The Great Gender Divergence",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "birdhistory.substack.com",
+      "feed_url": "https://birdhistory.substack.com/feed",
+      "link_count": 4,
+      "name": "Bird History",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "yawboadu.substack.com",
+      "feed_url": "https://yawboadu.substack.com/feed",
+      "link_count": 4,
+      "name": "Yaw's Brief: Guns, Trade, Cobalt & Africa Beyond Colonialism",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "jzmazlish.substack.com",
+      "feed_url": "https://jzmazlish.substack.com/feed",
+      "link_count": 4,
+      "name": "A Zibaldone",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "secondvoice.substack.com",
+      "feed_url": "https://secondvoice.substack.com/feed",
+      "link_count": 4,
+      "name": "Second Voice",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "grimoiremanor.substack.com",
+      "feed_url": "https://grimoiremanor.substack.com/feed",
+      "link_count": 4,
+      "name": "Secrets of Grimoire Manor",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "aleximas.substack.com",
+      "feed_url": "https://aleximas.substack.com/feed",
+      "link_count": 4,
+      "name": "Ghosts of Electricity",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "sebastiangaliani.substack.com",
+      "feed_url": "https://sebastiangaliani.substack.com/feed",
+      "link_count": 4,
+      "name": "Sebastian\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "whatiscalledthinking.substack.com",
+      "feed_url": "https://whatiscalledthinking.substack.com/feed",
+      "link_count": 3,
+      "name": "What Is Called Thinking?",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "dominiccummings.substack.com",
+      "feed_url": "https://dominiccummings.substack.com/feed",
+      "link_count": 3,
+      "name": "Dominic Cummings substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "brettongoods.substack.com",
+      "feed_url": "https://brettongoods.substack.com/feed",
+      "link_count": 3,
+      "name": "Bretton Goods",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kevinerdmann.substack.com",
+      "feed_url": "https://kevinerdmann.substack.com/feed",
+      "link_count": 3,
+      "name": "Erdmann Housing Tracker",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "sashachapin.substack.com",
+      "feed_url": "https://sashachapin.substack.com/feed",
+      "link_count": 3,
+      "name": "Sasha's 'Newsletter'",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "joshuagans.substack.com",
+      "feed_url": "https://joshuagans.substack.com/feed",
+      "link_count": 3,
+      "name": "Joshua Gans' Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "worldspiritsockpuppet.substack.com",
+      "feed_url": "https://worldspiritsockpuppet.substack.com/feed",
+      "link_count": 3,
+      "name": "world spirit sock puppet",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "modelthinking.substack.com",
+      "feed_url": "https://modelthinking.substack.com/feed",
+      "link_count": 3,
+      "name": "Model Thinking",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "fashionalexpectations.substack.com",
+      "feed_url": "https://fashionalexpectations.substack.com/feed",
+      "link_count": 3,
+      "name": "Fashional Expectations",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "austinvernon.substack.com",
+      "feed_url": "https://austinvernon.substack.com/feed",
+      "link_count": 3,
+      "name": "Austin Vernon's Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "reasonalone.substack.com",
+      "feed_url": "https://reasonalone.substack.com/feed",
+      "link_count": 3,
+      "name": "Sam Enright's Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "benjaminschneider.substack.com",
+      "feed_url": "https://benjaminschneider.substack.com/feed",
+      "link_count": 3,
+      "name": "The Urban Condition",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "inexactscience.substack.com",
+      "feed_url": "https://inexactscience.substack.com/feed",
+      "link_count": 3,
+      "name": "Inexact Science",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "adamunikowsky.substack.com",
+      "feed_url": "https://adamunikowsky.substack.com/feed",
+      "link_count": 3,
+      "name": "Adam's Legal Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "onepercentrule.substack.com",
+      "feed_url": "https://onepercentrule.substack.com/feed",
+      "link_count": 3,
+      "name": "The One Percent Rule",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "agglomerations.substack.com",
+      "feed_url": "https://agglomerations.substack.com/feed",
+      "link_count": 3,
+      "name": "Agglomerations",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "libertylensecon.substack.com",
+      "feed_url": "https://libertylensecon.substack.com/feed",
+      "link_count": 3,
+      "name": "Liberty Lens - An Economics Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "samenright.substack.com",
+      "feed_url": "https://samenright.substack.com/feed",
+      "link_count": 3,
+      "name": "Sam Enright's Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "curtjaimungal.substack.com",
+      "feed_url": "https://curtjaimungal.substack.com/feed",
+      "link_count": 3,
+      "name": "Curt Jaimungal",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "illuminatingfertility.substack.com",
+      "feed_url": "https://illuminatingfertility.substack.com/feed",
+      "link_count": 3,
+      "name": "Illuminating fertility",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "notnottalmud.substack.com",
+      "feed_url": "https://notnottalmud.substack.com/feed",
+      "link_count": 3,
+      "name": "not not Talmud",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "critiqueanddigest.substack.com",
+      "feed_url": "https://critiqueanddigest.substack.com/feed",
+      "link_count": 3,
+      "name": "The Abrahamic Metacritique",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "robinjbrooks.substack.com",
+      "feed_url": "https://robinjbrooks.substack.com/feed",
+      "link_count": 3,
+      "name": "Robin J Brooks",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "sftw.substack.com",
+      "feed_url": "https://sftw.substack.com/feed",
+      "link_count": 3,
+      "name": "Software is Feeding the World",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "cpwalker.substack.com",
+      "feed_url": "https://cpwalker.substack.com/feed",
+      "link_count": 3,
+      "name": "Out of Sample",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "ianleslie.substack.com",
+      "feed_url": "https://ianleslie.substack.com/feed",
+      "link_count": 2,
+      "name": "The Ruffian",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "theupheaval.substack.com",
+      "feed_url": "https://theupheaval.substack.com/feed",
+      "link_count": 2,
+      "name": "The Upheaval",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "bartkus.substack.com",
+      "feed_url": "https://bartkus.substack.com/feed",
+      "link_count": 2,
+      "name": "Postcards from Home",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "rafaelrguthmann.substack.com",
+      "feed_url": "https://rafaelrguthmann.substack.com/feed",
+      "link_count": 2,
+      "name": "Rafael\u2019s Commentary",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "marketpower.substack.com",
+      "feed_url": "https://marketpower.substack.com/feed",
+      "link_count": 2,
+      "name": "Market Power Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "theline.substack.com",
+      "feed_url": "https://theline.substack.com/feed",
+      "link_count": 2,
+      "name": "The Line",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "eccentricculinary.substack.com",
+      "feed_url": "https://eccentricculinary.substack.com/feed",
+      "link_count": 2,
+      "name": "An Eccentric Culinary History",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "samf.substack.com",
+      "feed_url": "https://samf.substack.com/feed",
+      "link_count": 2,
+      "name": "Comment is Freed",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thefitzwilliam.substack.com",
+      "feed_url": "https://thefitzwilliam.substack.com/feed",
+      "link_count": 2,
+      "name": "The Fitzwilliam",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "bensouthwood.substack.com",
+      "feed_url": "https://bensouthwood.substack.com/feed",
+      "link_count": 2,
+      "name": "Baldwin",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kirkegaard.substack.com",
+      "feed_url": "https://kirkegaard.substack.com/feed",
+      "link_count": 2,
+      "name": "Just Emil Kirkegaard Things",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "siddhesh.substack.com",
+      "feed_url": "https://siddhesh.substack.com/feed",
+      "link_count": 2,
+      "name": "Obvious Bicycle",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "eightateeight.substack.com",
+      "feed_url": "https://eightateeight.substack.com/feed",
+      "link_count": 2,
+      "name": "EightateEight",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "adaobi.substack.com",
+      "feed_url": "https://adaobi.substack.com/feed",
+      "link_count": 2,
+      "name": "Adaobi\u2019s Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "fasterplease.substack.com",
+      "feed_url": "https://fasterplease.substack.com/feed",
+      "link_count": 2,
+      "name": "Faster, Please!",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "houseofstrauss.substack.com",
+      "feed_url": "https://houseofstrauss.substack.com/feed",
+      "link_count": 2,
+      "name": "House of Strauss",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "mattsclancy.substack.com",
+      "feed_url": "https://mattsclancy.substack.com/feed",
+      "link_count": 2,
+      "name": "What's New Under the Sun",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "antonhowes.substack.com",
+      "feed_url": "https://antonhowes.substack.com/feed",
+      "link_count": 2,
+      "name": "Age of Invention, by Anton Howes",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "tomwestgarth.substack.com",
+      "feed_url": "https://tomwestgarth.substack.com/feed",
+      "link_count": 2,
+      "name": "Future 2.0",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "marygaitskill.substack.com",
+      "feed_url": "https://marygaitskill.substack.com/feed",
+      "link_count": 2,
+      "name": "Out of It",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "ryanbourne.substack.com",
+      "feed_url": "https://ryanbourne.substack.com/feed",
+      "link_count": 2,
+      "name": "The War on Prices",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "dynomight.substack.com",
+      "feed_url": "https://dynomight.substack.com/feed",
+      "link_count": 2,
+      "name": "DYNOMIGHT INTERNET NEWSLETTER",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "knowledgeproblem.substack.com",
+      "feed_url": "https://knowledgeproblem.substack.com/feed",
+      "link_count": 2,
+      "name": "Knowledge Problem",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "jonathanhaidt.substack.com",
+      "feed_url": "https://jonathanhaidt.substack.com/feed",
+      "link_count": 2,
+      "name": "After Babel",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "sotonye.substack.com",
+      "feed_url": "https://sotonye.substack.com/feed",
+      "link_count": 2,
+      "name": "NeoNarrative",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "citythatworks.substack.com",
+      "feed_url": "https://citythatworks.substack.com/feed",
+      "link_count": 2,
+      "name": "A City That Works",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "trevorklee.substack.com",
+      "feed_url": "https://trevorklee.substack.com/feed",
+      "link_count": 2,
+      "name": "Trevor Klee\u2019s Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "sarahconstantin.substack.com",
+      "feed_url": "https://sarahconstantin.substack.com/feed",
+      "link_count": 2,
+      "name": "Rough Diamonds",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kamilkovar.substack.com",
+      "feed_url": "https://kamilkovar.substack.com/feed",
+      "link_count": 2,
+      "name": "European Macro Perspectives",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "dietrichvollrath.substack.com",
+      "feed_url": "https://dietrichvollrath.substack.com/feed",
+      "link_count": 2,
+      "name": "Economic Growth Blog",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "benthams.substack.com",
+      "feed_url": "https://benthams.substack.com/feed",
+      "link_count": 2,
+      "name": "Bentham's Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "causalinf.substack.com",
+      "feed_url": "https://causalinf.substack.com/feed",
+      "link_count": 2,
+      "name": "Scott's Mixtape Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "runsandtumbles.substack.com",
+      "feed_url": "https://runsandtumbles.substack.com/feed",
+      "link_count": 2,
+      "name": "Runs and tumbles",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "simongrimm.substack.com",
+      "feed_url": "https://simongrimm.substack.com/feed",
+      "link_count": 2,
+      "name": "Simon Grimm",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "marcstein.substack.com",
+      "feed_url": "https://marcstein.substack.com/feed",
+      "link_count": 2,
+      "name": "The Stein Line",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "chrisdallariva.substack.com",
+      "feed_url": "https://chrisdallariva.substack.com/feed",
+      "link_count": 2,
+      "name": "Can't Get Much Higher",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "heirtothethought.substack.com",
+      "feed_url": "https://heirtothethought.substack.com/feed",
+      "link_count": 2,
+      "name": "Heir to the Thought",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "hypertextjournal.substack.com",
+      "feed_url": "https://hypertextjournal.substack.com/feed",
+      "link_count": 2,
+      "name": "Hypertext",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "graymirror.substack.com",
+      "feed_url": "https://graymirror.substack.com/feed",
+      "link_count": 2,
+      "name": "Gray Mirror",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "japanoptimist.substack.com",
+      "feed_url": "https://japanoptimist.substack.com/feed",
+      "link_count": 2,
+      "name": "Japan Optimist",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "scholarstage.substack.com",
+      "feed_url": "https://scholarstage.substack.com/feed",
+      "link_count": 2,
+      "name": "The Scholar's Stage",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "lucagattonicelli.substack.com",
+      "feed_url": "https://lucagattonicelli.substack.com/feed",
+      "link_count": 2,
+      "name": "Cornerstone",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "economicorder.substack.com",
+      "feed_url": "https://economicorder.substack.com/feed",
+      "link_count": 2,
+      "name": "Economic Order",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "greglukianoff.substack.com",
+      "feed_url": "https://greglukianoff.substack.com/feed",
+      "link_count": 2,
+      "name": "The Eternally Radical Idea with Greg Lukianoff",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "alethios.substack.com",
+      "feed_url": "https://alethios.substack.com/feed",
+      "link_count": 2,
+      "name": "Public Service",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "daviddfriedman.substack.com",
+      "feed_url": "https://daviddfriedman.substack.com/feed",
+      "link_count": 2,
+      "name": "David Friedman\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "cyrilhedoin.substack.com",
+      "feed_url": "https://cyrilhedoin.substack.com/feed",
+      "link_count": 2,
+      "name": "The Archimedean Point",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "ulkaraghayeva.substack.com",
+      "feed_url": "https://ulkaraghayeva.substack.com/feed",
+      "link_count": 2,
+      "name": "The Bass Line",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "ondemocracyinindonesia.substack.com",
+      "feed_url": "https://ondemocracyinindonesia.substack.com/feed",
+      "link_count": 2,
+      "name": "EngineeringNusantara",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "auren.substack.com",
+      "feed_url": "https://auren.substack.com/feed",
+      "link_count": 2,
+      "name": "Summation by Auren Hoffman",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "miloandthecalf.substack.com",
+      "feed_url": "https://miloandthecalf.substack.com/feed",
+      "link_count": 2,
+      "name": "Milo and the Calf",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "andrewroberts.substack.com",
+      "feed_url": "https://andrewroberts.substack.com/feed",
+      "link_count": 2,
+      "name": "A Political Scientist's Progress",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "gopostal.substack.com",
+      "feed_url": "https://gopostal.substack.com/feed",
+      "link_count": 2,
+      "name": "Go[ing] Postal",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "macroeconomicpolicynexus.substack.com",
+      "feed_url": "https://macroeconomicpolicynexus.substack.com/feed",
+      "link_count": 2,
+      "name": "Macroeconomic Policy Nexus",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "howiwrite.substack.com",
+      "feed_url": "https://howiwrite.substack.com/feed",
+      "link_count": 2,
+      "name": "David Perell's How I Write",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "anchovyhouse.substack.com",
+      "feed_url": "https://anchovyhouse.substack.com/feed",
+      "link_count": 2,
+      "name": "Anchovy House",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "dontaylor13.substack.com",
+      "feed_url": "https://dontaylor13.substack.com/feed",
+      "link_count": 2,
+      "name": "Professor Taylor's Two Ditches Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "liyapalagashvili.substack.com",
+      "feed_url": "https://liyapalagashvili.substack.com/feed",
+      "link_count": 2,
+      "name": "Labor Market Matters",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "lydialaurenson.substack.com",
+      "feed_url": "https://lydialaurenson.substack.com/feed",
+      "link_count": 2,
+      "name": "Solar Light",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "jpandrew.substack.com",
+      "feed_url": "https://jpandrew.substack.com/feed",
+      "link_count": 2,
+      "name": "Reflections On What Matters",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "humancarbohydrate.substack.com",
+      "feed_url": "https://humancarbohydrate.substack.com/feed",
+      "link_count": 2,
+      "name": "the Human Carbohydrate",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "novum.substack.com",
+      "feed_url": "https://novum.substack.com/feed",
+      "link_count": 2,
+      "name": "novum",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "nanransohoff.substack.com",
+      "feed_url": "https://nanransohoff.substack.com/feed",
+      "link_count": 2,
+      "name": "Nan\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "ethanding.substack.com",
+      "feed_url": "https://ethanding.substack.com/feed",
+      "link_count": 2,
+      "name": "mandates",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "stayathomemacro.substack.com",
+      "feed_url": "https://stayathomemacro.substack.com/feed",
+      "link_count": 2,
+      "name": "Stay-At-Home Macro (SAHM)",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "gersemann.substack.com",
+      "feed_url": "https://gersemann.substack.com/feed",
+      "link_count": 2,
+      "name": "Berlin calling",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "romanticon.substack.com",
+      "feed_url": "https://romanticon.substack.com/feed",
+      "link_count": 2,
+      "name": "Romanticon",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "whitmanic.substack.com",
+      "feed_url": "https://whitmanic.substack.com/feed",
+      "link_count": 2,
+      "name": "Whit\u00b7manic",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kidsprefercheese.substack.com",
+      "feed_url": "https://kidsprefercheese.substack.com/feed",
+      "link_count": 2,
+      "name": "Kids Prefer Cheese",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "jonathanbate.substack.com",
+      "feed_url": "https://jonathanbate.substack.com/feed",
+      "link_count": 2,
+      "name": "Jonathan Bate's Literary Remains",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thetwocents.substack.com",
+      "feed_url": "https://thetwocents.substack.com/feed",
+      "link_count": 2,
+      "name": "The Two Cents",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "carloschavezp29.substack.com",
+      "feed_url": "https://carloschavezp29.substack.com/feed",
+      "link_count": 2,
+      "name": "Carlos Chavez",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "sciencepolicyinsider.substack.com",
+      "feed_url": "https://sciencepolicyinsider.substack.com/feed",
+      "link_count": 2,
+      "name": "sciencepolicyinsider",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "statsandsociety.substack.com",
+      "feed_url": "https://statsandsociety.substack.com/feed",
+      "link_count": 2,
+      "name": "Political Economy, Stats, and Society",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "notcompeting.substack.com",
+      "feed_url": "https://notcompeting.substack.com/feed",
+      "link_count": 2,
+      "name": "NotCompeting",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "hommepresse.substack.com",
+      "feed_url": "https://hommepresse.substack.com/feed",
+      "link_count": 2,
+      "name": "L'Homme press\u00e9",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "hunchbox.substack.com",
+      "feed_url": "https://hunchbox.substack.com/feed",
+      "link_count": 2,
+      "name": "The Hunch Box",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "hereticalinsights.substack.com",
+      "feed_url": "https://hereticalinsights.substack.com/feed",
+      "link_count": 2,
+      "name": "Heretical Insights",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "bycig.substack.com",
+      "feed_url": "https://bycig.substack.com/feed",
+      "link_count": 2,
+      "name": "Passing the Torch Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "spacejamteam.substack.com",
+      "feed_url": "https://spacejamteam.substack.com/feed",
+      "link_count": 2,
+      "name": "space jam",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "charlesschifano.substack.com",
+      "feed_url": "https://charlesschifano.substack.com/feed",
+      "link_count": 1,
+      "name": "Desk Notes by Charles Schifano",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "lexnode.substack.com",
+      "feed_url": "https://lexnode.substack.com/feed",
+      "link_count": 1,
+      "name": "MetaLeX Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "brunomacaes.substack.com",
+      "feed_url": "https://brunomacaes.substack.com/feed",
+      "link_count": 1,
+      "name": "World Builders",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "topsecretumbra.substack.com",
+      "feed_url": "https://topsecretumbra.substack.com/feed",
+      "link_count": 1,
+      "name": "TOP SECRET UMBRA",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "genagorlin.substack.com",
+      "feed_url": "https://genagorlin.substack.com/feed",
+      "link_count": 1,
+      "name": "The Psychology of Ambition",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "annagat.substack.com",
+      "feed_url": "https://annagat.substack.com/feed",
+      "link_count": 1,
+      "name": "American Innocence by Anna G\u00e1t",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "ryanavent.substack.com",
+      "feed_url": "https://ryanavent.substack.com/feed",
+      "link_count": 1,
+      "name": "The Bellows",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "bariweiss.substack.com",
+      "feed_url": "https://bariweiss.substack.com/feed",
+      "link_count": 1,
+      "name": "The Free Press",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "etzhasadeh.substack.com",
+      "feed_url": "https://etzhasadeh.substack.com/feed",
+      "link_count": 1,
+      "name": "Etz Hasadeh",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "moreisdifferent.substack.com",
+      "feed_url": "https://moreisdifferent.substack.com/feed",
+      "link_count": 1,
+      "name": "More is Different",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "clarioncall.substack.com",
+      "feed_url": "https://clarioncall.substack.com/feed",
+      "link_count": 1,
+      "name": "Clarion Call",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "virginica.substack.com",
+      "feed_url": "https://virginica.substack.com/feed",
+      "link_count": 1,
+      "name": "Virginica",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "ilyalozovsky.substack.com",
+      "feed_url": "https://ilyalozovsky.substack.com/feed",
+      "link_count": 1,
+      "name": "A Sip of Freedom",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "goodtosell.substack.com",
+      "feed_url": "https://goodtosell.substack.com/feed",
+      "link_count": 1,
+      "name": "Good to Sell",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "robertsdavidn.substack.com",
+      "feed_url": "https://robertsdavidn.substack.com/feed",
+      "link_count": 1,
+      "name": "David Roberts || Sparks From Culture",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "annekadet.substack.com",
+      "feed_url": "https://annekadet.substack.com/feed",
+      "link_count": 1,
+      "name": "CAF\u00c9 ANNE",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "danielstone.substack.com",
+      "feed_url": "https://danielstone.substack.com/feed",
+      "link_count": 1,
+      "name": "Daniel Stone",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "edtalks.substack.com",
+      "feed_url": "https://edtalks.substack.com/feed",
+      "link_count": 1,
+      "name": "Rough Cuts",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "maxmeyer.substack.com",
+      "feed_url": "https://maxmeyer.substack.com/feed",
+      "link_count": 1,
+      "name": "Max Meyer vs. the Universe",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "vpostrel.substack.com",
+      "feed_url": "https://vpostrel.substack.com/feed",
+      "link_count": 1,
+      "name": "Virginia's Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "renesaenz.substack.com",
+      "feed_url": "https://renesaenz.substack.com/feed",
+      "link_count": 1,
+      "name": "rene saenz",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "nsokolsky.substack.com",
+      "feed_url": "https://nsokolsky.substack.com/feed",
+      "link_count": 1,
+      "name": "First principles trivia",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "rogerpielkejr.substack.com",
+      "feed_url": "https://rogerpielkejr.substack.com/feed",
+      "link_count": 1,
+      "name": "The Honest Broker",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "braddelong.substack.com",
+      "feed_url": "https://braddelong.substack.com/feed",
+      "link_count": 1,
+      "name": "DeLong's Grasping Reality Weblog",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "selfinsociety.substack.com",
+      "feed_url": "https://selfinsociety.substack.com/feed",
+      "link_count": 1,
+      "name": "Self in Society",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "chinatalk.substack.com",
+      "feed_url": "https://chinatalk.substack.com/feed",
+      "link_count": 1,
+      "name": "ChinaTalk",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "marketingbs.substack.com",
+      "feed_url": "https://marketingbs.substack.com/feed",
+      "link_count": 1,
+      "name": "Marketing BS with Edward Nevraumont",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "openthebooks.substack.com",
+      "feed_url": "https://openthebooks.substack.com/feed",
+      "link_count": 1,
+      "name": "OpenTheBooks",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "neddonovan.substack.com",
+      "feed_url": "https://neddonovan.substack.com/feed",
+      "link_count": 1,
+      "name": "Terra Nullius, by Ned Donovan",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "stuartritchie.substack.com",
+      "feed_url": "https://stuartritchie.substack.com/feed",
+      "link_count": 1,
+      "name": "Science Fictions",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "seanpatrickhughes.substack.com",
+      "feed_url": "https://seanpatrickhughes.substack.com/feed",
+      "link_count": 1,
+      "name": "Reasonable Essays",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "theneverendingfall.substack.com",
+      "feed_url": "https://theneverendingfall.substack.com/feed",
+      "link_count": 1,
+      "name": "TheNeverEndingFall\u2019s Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "floatingcoordinates.substack.com",
+      "feed_url": "https://floatingcoordinates.substack.com/feed",
+      "link_count": 1,
+      "name": "Floating Coordinates by Soumya Gupta",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kareem.substack.com",
+      "feed_url": "https://kareem.substack.com/feed",
+      "link_count": 1,
+      "name": "Kareem Takes on the News",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "akashkulgod.substack.com",
+      "feed_url": "https://akashkulgod.substack.com/feed",
+      "link_count": 1,
+      "name": "Akash Kulgod",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "navras.substack.com",
+      "feed_url": "https://navras.substack.com/feed",
+      "link_count": 1,
+      "name": "navras",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "keirbradwell.substack.com",
+      "feed_url": "https://keirbradwell.substack.com/feed",
+      "link_count": 1,
+      "name": "Present Discontents",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "worksinprogress.substack.com",
+      "feed_url": "https://worksinprogress.substack.com/feed",
+      "link_count": 1,
+      "name": "The Works in Progress Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "countercraft.substack.com",
+      "feed_url": "https://countercraft.substack.com/feed",
+      "link_count": 1,
+      "name": "Counter Craft",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "erikexamines.substack.com",
+      "feed_url": "https://erikexamines.substack.com/feed",
+      "link_count": 1,
+      "name": "Erik Examines",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "hamiltonnoel.substack.com",
+      "feed_url": "https://hamiltonnoel.substack.com/feed",
+      "link_count": 1,
+      "name": "Emergent Strategy",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "reactionaryfeminist.substack.com",
+      "feed_url": "https://reactionaryfeminist.substack.com/feed",
+      "link_count": 1,
+      "name": "Mary Harrington",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "niccolo.substack.com",
+      "feed_url": "https://niccolo.substack.com/feed",
+      "link_count": 1,
+      "name": "Fisted by Foucault",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "huazong.substack.com",
+      "feed_url": "https://huazong.substack.com/feed",
+      "link_count": 1,
+      "name": "Huazong\u2019s Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kvetch.substack.com",
+      "feed_url": "https://kvetch.substack.com/feed",
+      "link_count": 1,
+      "name": "Kvetch",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "xtztcg.substack.com",
+      "feed_url": "https://xtztcg.substack.com/feed",
+      "link_count": 1,
+      "name": "Mad Confections",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "devlin.substack.com",
+      "feed_url": "https://devlin.substack.com/feed",
+      "link_count": 1,
+      "name": "Devlin\u2019s Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "snyder.substack.com",
+      "feed_url": "https://snyder.substack.com/feed",
+      "link_count": 1,
+      "name": "Thinking about...",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "goodideasonly.substack.com",
+      "feed_url": "https://goodideasonly.substack.com/feed",
+      "link_count": 1,
+      "name": "Skeptical Clarity",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "policytensor.substack.com",
+      "feed_url": "https://policytensor.substack.com/feed",
+      "link_count": 1,
+      "name": "Policy Tensor",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "wesleyyang.substack.com",
+      "feed_url": "https://wesleyyang.substack.com/feed",
+      "link_count": 1,
+      "name": "Year Zero",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "precedents.substack.com",
+      "feed_url": "https://precedents.substack.com/feed",
+      "link_count": 1,
+      "name": "Dangerous Precedents",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "templeofsociology.substack.com",
+      "feed_url": "https://templeofsociology.substack.com/feed",
+      "link_count": 1,
+      "name": "Temple of Sociology",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "andypreston.substack.com",
+      "feed_url": "https://andypreston.substack.com/feed",
+      "link_count": 1,
+      "name": "Assault of Thoughts",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "mwstory.substack.com",
+      "feed_url": "https://mwstory.substack.com/feed",
+      "link_count": 1,
+      "name": "Too long to tweet",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "sympatheticopposition.substack.com",
+      "feed_url": "https://sympatheticopposition.substack.com/feed",
+      "link_count": 1,
+      "name": "sympathetic opposition",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "fallows.substack.com",
+      "feed_url": "https://fallows.substack.com/feed",
+      "link_count": 1,
+      "name": "Breaking the News",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "dgoodwin.substack.com",
+      "feed_url": "https://dgoodwin.substack.com/feed",
+      "link_count": 1,
+      "name": "Punk Rock Bio",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "carolinastories.substack.com",
+      "feed_url": "https://carolinastories.substack.com/feed",
+      "link_count": 1,
+      "name": "Smaller Circles",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "maximumeffort.substack.com",
+      "feed_url": "https://maximumeffort.substack.com/feed",
+      "link_count": 1,
+      "name": "Maximum Effort, Minimum Reward",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "beijingchannel.substack.com",
+      "feed_url": "https://beijingchannel.substack.com/feed",
+      "link_count": 1,
+      "name": "Beijing Channel",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "cognitiverevolution.substack.com",
+      "feed_url": "https://cognitiverevolution.substack.com/feed",
+      "link_count": 1,
+      "name": "The Cognitive Revolution",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "oalexanderdk.substack.com",
+      "feed_url": "https://oalexanderdk.substack.com/feed",
+      "link_count": 1,
+      "name": "OSINT & Analysis by Oliver Alexander",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "noahcarl.substack.com",
+      "feed_url": "https://noahcarl.substack.com/feed",
+      "link_count": 1,
+      "name": "Noah\u2019s Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kons.substack.com",
+      "feed_url": "https://kons.substack.com/feed",
+      "link_count": 1,
+      "name": "Konstantin's newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "darrellowens.substack.com",
+      "feed_url": "https://darrellowens.substack.com/feed",
+      "link_count": 1,
+      "name": "The Discourse Lounge",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "weibo.substack.com",
+      "feed_url": "https://weibo.substack.com/feed",
+      "link_count": 1,
+      "name": "Moly\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "alexepstein.substack.com",
+      "feed_url": "https://alexepstein.substack.com/feed",
+      "link_count": 1,
+      "name": "Energy Talking Points by Alex Epstein",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "escapingflatland.substack.com",
+      "feed_url": "https://escapingflatland.substack.com/feed",
+      "link_count": 1,
+      "name": "Escaping Flatland",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "hctr.substack.com",
+      "feed_url": "https://hctr.substack.com/feed",
+      "link_count": 1,
+      "name": "Cycling Samsara",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "biblioracle.substack.com",
+      "feed_url": "https://biblioracle.substack.com/feed",
+      "link_count": 1,
+      "name": "The Biblioracle Recommends",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "robkhenderson.substack.com",
+      "feed_url": "https://robkhenderson.substack.com/feed",
+      "link_count": 1,
+      "name": "Rob Henderson's Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "talkingbigideas.substack.com",
+      "feed_url": "https://talkingbigideas.substack.com/feed",
+      "link_count": 1,
+      "name": "Talking Big Ideas",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "boyle.substack.com",
+      "feed_url": "https://boyle.substack.com/feed",
+      "link_count": 1,
+      "name": "The Rambler",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "duncanmcclements.substack.com",
+      "feed_url": "https://duncanmcclements.substack.com/feed",
+      "link_count": 1,
+      "name": "Model Thinking",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "oneusefulthing.substack.com",
+      "feed_url": "https://oneusefulthing.substack.com/feed",
+      "link_count": 1,
+      "name": "One Useful Thing",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "weirdmedievalguys.substack.com",
+      "feed_url": "https://weirdmedievalguys.substack.com/feed",
+      "link_count": 1,
+      "name": "weird medieval guys",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "jacobbuckman.substack.com",
+      "feed_url": "https://jacobbuckman.substack.com/feed",
+      "link_count": 1,
+      "name": "As Clay Awakens",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "korybko.substack.com",
+      "feed_url": "https://korybko.substack.com/feed",
+      "link_count": 1,
+      "name": "Andrew Korybko's Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "nanothoughts.substack.com",
+      "feed_url": "https://nanothoughts.substack.com/feed",
+      "link_count": 1,
+      "name": "Nano Thoughts",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "stoneageherbalist.substack.com",
+      "feed_url": "https://stoneageherbalist.substack.com/feed",
+      "link_count": 1,
+      "name": "Grey Goose Chronicles",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "allshire.substack.com",
+      "feed_url": "https://allshire.substack.com/feed",
+      "link_count": 1,
+      "name": "Double A Rebooted",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "sebjenseb.substack.com",
+      "feed_url": "https://sebjenseb.substack.com/feed",
+      "link_count": 1,
+      "name": "Technotheoria",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "woodfromeden.substack.com",
+      "feed_url": "https://woodfromeden.substack.com/feed",
+      "link_count": 1,
+      "name": "Wood From Eden",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "cathedraleffect.substack.com",
+      "feed_url": "https://cathedraleffect.substack.com/feed",
+      "link_count": 1,
+      "name": "Cathedral Effect",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "lastweeksnewyorker.substack.com",
+      "feed_url": "https://lastweeksnewyorker.substack.com/feed",
+      "link_count": 1,
+      "name": "Last Week's New Yorker Review",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "colemanhughes.substack.com",
+      "feed_url": "https://colemanhughes.substack.com/feed",
+      "link_count": 1,
+      "name": "Coleman\u2019s Corner",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "natesilver.substack.com",
+      "feed_url": "https://natesilver.substack.com/feed",
+      "link_count": 1,
+      "name": "Silver Bulletin",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "freddiedeboer.substack.com",
+      "feed_url": "https://freddiedeboer.substack.com/feed",
+      "link_count": 1,
+      "name": "Freddie deBoer",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "lefineder.substack.com",
+      "feed_url": "https://lefineder.substack.com/feed",
+      "link_count": 1,
+      "name": "Lefineder\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kevinmunger.substack.com",
+      "feed_url": "https://kevinmunger.substack.com/feed",
+      "link_count": 1,
+      "name": "Never Met a Science",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "interintellect.substack.com",
+      "feed_url": "https://interintellect.substack.com/feed",
+      "link_count": 1,
+      "name": "Interintellect",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "dblalock.substack.com",
+      "feed_url": "https://dblalock.substack.com/feed",
+      "link_count": 1,
+      "name": "Davis Summarizes Papers",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "basilwrites.substack.com",
+      "feed_url": "https://basilwrites.substack.com/feed",
+      "link_count": 1,
+      "name": "Basil Writes",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "leber.substack.com",
+      "feed_url": "https://leber.substack.com/feed",
+      "link_count": 1,
+      "name": "Vanguard Anthology",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "mariandrew.substack.com",
+      "feed_url": "https://mariandrew.substack.com/feed",
+      "link_count": 1,
+      "name": "Out of the Blue",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "popehat.substack.com",
+      "feed_url": "https://popehat.substack.com/feed",
+      "link_count": 1,
+      "name": "The Popehat Report",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "animationobsessive.substack.com",
+      "feed_url": "https://animationobsessive.substack.com/feed",
+      "link_count": 1,
+      "name": "Animation Obsessive",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thomaseaston.substack.com",
+      "feed_url": "https://thomaseaston.substack.com/feed",
+      "link_count": 1,
+      "name": "India Business This Week",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "milkycities.substack.com",
+      "feed_url": "https://milkycities.substack.com/feed",
+      "link_count": 1,
+      "name": "Milky Cities",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "russ880.substack.com",
+      "feed_url": "https://russ880.substack.com/feed",
+      "link_count": 1,
+      "name": "Listening to the Sirens",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "peterisztin.substack.com",
+      "feed_url": "https://peterisztin.substack.com/feed",
+      "link_count": 1,
+      "name": "In Mercatu Veritas",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "buildingsomethingold.substack.com",
+      "feed_url": "https://buildingsomethingold.substack.com/feed",
+      "link_count": 1,
+      "name": "Building Something Old",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "digressionsimpressions.substack.com",
+      "feed_url": "https://digressionsimpressions.substack.com/feed",
+      "link_count": 1,
+      "name": "digressionsimpressions\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "henkb.substack.com",
+      "feed_url": "https://henkb.substack.com/feed",
+      "link_count": 1,
+      "name": "Henkalicious",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "justifications.substack.com",
+      "feed_url": "https://justifications.substack.com/feed",
+      "link_count": 1,
+      "name": "Justifications",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "etiennefd.substack.com",
+      "feed_url": "https://etiennefd.substack.com/feed",
+      "link_count": 1,
+      "name": "Hopeful Monsters",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "bessstillman.substack.com",
+      "feed_url": "https://bessstillman.substack.com/feed",
+      "link_count": 1,
+      "name": "Everything Is An Emergency",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "falliblepieces.substack.com",
+      "feed_url": "https://falliblepieces.substack.com/feed",
+      "link_count": 1,
+      "name": "Fallible Pieces",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "deliprao.substack.com",
+      "feed_url": "https://deliprao.substack.com/feed",
+      "link_count": 1,
+      "name": "AI Research & Strategy",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "christophermschroeder.substack.com",
+      "feed_url": "https://christophermschroeder.substack.com/feed",
+      "link_count": 1,
+      "name": "Christopher\u2019s Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "1517.substack.com",
+      "feed_url": "https://1517.substack.com/feed",
+      "link_count": 1,
+      "name": "1517 Fund",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "statmodeling.substack.com",
+      "feed_url": "https://statmodeling.substack.com/feed",
+      "link_count": 1,
+      "name": "The Future of Statistical Modeling",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "banburismus.substack.com",
+      "feed_url": "https://banburismus.substack.com/feed",
+      "link_count": 1,
+      "name": "Banburismus",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "usefulfictions.substack.com",
+      "feed_url": "https://usefulfictions.substack.com/feed",
+      "link_count": 1,
+      "name": "Useful Fictions",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "niklasanzinger.substack.com",
+      "feed_url": "https://niklasanzinger.substack.com/feed",
+      "link_count": 1,
+      "name": "Infinita City Times",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "sarafredman.substack.com",
+      "feed_url": "https://sarafredman.substack.com/feed",
+      "link_count": 1,
+      "name": "Write Like a Mother",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "protagonistfuture.substack.com",
+      "feed_url": "https://protagonistfuture.substack.com/feed",
+      "link_count": 1,
+      "name": "Protagonist Science",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "pursuingagency.substack.com",
+      "feed_url": "https://pursuingagency.substack.com/feed",
+      "link_count": 1,
+      "name": "Pursuing Agency",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "manuelhinds.substack.com",
+      "feed_url": "https://manuelhinds.substack.com/feed",
+      "link_count": 1,
+      "name": "Manuel\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "avrasya.substack.com",
+      "feed_url": "https://avrasya.substack.com/feed",
+      "link_count": 1,
+      "name": "Avrasya\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "riancwhitton.substack.com",
+      "feed_url": "https://riancwhitton.substack.com/feed",
+      "link_count": 1,
+      "name": "Doctor Syn",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "benhopkinson.substack.com",
+      "feed_url": "https://benhopkinson.substack.com/feed",
+      "link_count": 1,
+      "name": "Yes and Grow",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "danieltimms.substack.com",
+      "feed_url": "https://danieltimms.substack.com/feed",
+      "link_count": 1,
+      "name": "Daniel\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "sammatey.substack.com",
+      "feed_url": "https://sammatey.substack.com/feed",
+      "link_count": 1,
+      "name": "The Weekly Anthropocene",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "zworld.substack.com",
+      "feed_url": "https://zworld.substack.com/feed",
+      "link_count": 1,
+      "name": "Same Difference",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "boldreasoningwithpetersinger.substack.com",
+      "feed_url": "https://boldreasoningwithpetersinger.substack.com/feed",
+      "link_count": 1,
+      "name": "Bold Reasoning with Peter Singer",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "zichenghuang.substack.com",
+      "feed_url": "https://zichenghuang.substack.com/feed",
+      "link_count": 1,
+      "name": "Letters from the Chinese Room",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thegeneralist.substack.com",
+      "feed_url": "https://thegeneralist.substack.com/feed",
+      "link_count": 1,
+      "name": "The Generalist",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "inquisitivebird.substack.com",
+      "feed_url": "https://inquisitivebird.substack.com/feed",
+      "link_count": 1,
+      "name": "Patterns in Humanity",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "importai.substack.com",
+      "feed_url": "https://importai.substack.com/feed",
+      "link_count": 1,
+      "name": "Import AI",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "davidmanuel.substack.com",
+      "feed_url": "https://davidmanuel.substack.com/feed",
+      "link_count": 1,
+      "name": "Many Ways to Meliorate",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "beforeporcelain.substack.com",
+      "feed_url": "https://beforeporcelain.substack.com/feed",
+      "link_count": 1,
+      "name": "Before Porcelain",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "petergray.substack.com",
+      "feed_url": "https://petergray.substack.com/feed",
+      "link_count": 1,
+      "name": "Play Makes Us Human",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "mickryan.substack.com",
+      "feed_url": "https://mickryan.substack.com/feed",
+      "link_count": 1,
+      "name": "Futura Doctrina",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "divyanshu99.substack.com",
+      "feed_url": "https://divyanshu99.substack.com/feed",
+      "link_count": 1,
+      "name": "Impatiently Curious",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "spheresofpossibility.substack.com",
+      "feed_url": "https://spheresofpossibility.substack.com/feed",
+      "link_count": 1,
+      "name": "Spheres of Possibility",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "telescopio.substack.com",
+      "feed_url": "https://telescopio.substack.com/feed",
+      "link_count": 1,
+      "name": "Telescopio",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "cosmosinstitute.substack.com",
+      "feed_url": "https://cosmosinstitute.substack.com/feed",
+      "link_count": 1,
+      "name": "Cosmos Institute",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "aashishreddy.substack.com",
+      "feed_url": "https://aashishreddy.substack.com/feed",
+      "link_count": 1,
+      "name": "Aashish Reddy",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "celestemdavis.substack.com",
+      "feed_url": "https://celestemdavis.substack.com/feed",
+      "link_count": 1,
+      "name": "Matriarchal Blessing",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "affectivemedicine.substack.com",
+      "feed_url": "https://affectivemedicine.substack.com/feed",
+      "link_count": 1,
+      "name": "Affective Medicine",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "chinesecookingdemystified.substack.com",
+      "feed_url": "https://chinesecookingdemystified.substack.com/feed",
+      "link_count": 1,
+      "name": "Chinese Cooking Demystified Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "inferencemagazine.substack.com",
+      "feed_url": "https://inferencemagazine.substack.com/feed",
+      "link_count": 1,
+      "name": "Inference",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "garymarcus.substack.com",
+      "feed_url": "https://garymarcus.substack.com/feed",
+      "link_count": 1,
+      "name": "Marcus on AI",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "alzabin.substack.com",
+      "feed_url": "https://alzabin.substack.com/feed",
+      "link_count": 1,
+      "name": "Alzabin's Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "exante.substack.com",
+      "feed_url": "https://exante.substack.com/feed",
+      "link_count": 1,
+      "name": "Ex Ante",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "jasmine.substack.com",
+      "feed_url": "https://jasmine.substack.com/feed",
+      "link_count": 1,
+      "name": "@jasmine\u2019s substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "frontelligence.substack.com",
+      "feed_url": "https://frontelligence.substack.com/feed",
+      "link_count": 1,
+      "name": "Frontelligence Insight",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "contrarian.substack.com",
+      "feed_url": "https://contrarian.substack.com/feed",
+      "link_count": 1,
+      "name": "The Contrarian",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "outrageousfortune7.substack.com",
+      "feed_url": "https://outrageousfortune7.substack.com/feed",
+      "link_count": 1,
+      "name": "Outrageous Fortune",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "yaschamounk.substack.com",
+      "feed_url": "https://yaschamounk.substack.com/feed",
+      "link_count": 1,
+      "name": "Yascha Mounk",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "executivefunctions.substack.com",
+      "feed_url": "https://executivefunctions.substack.com/feed",
+      "link_count": 1,
+      "name": "Executive Functions",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "edgeesmeralda2025.substack.com",
+      "feed_url": "https://edgeesmeralda2025.substack.com/feed",
+      "link_count": 1,
+      "name": "Edge Esmeralda 2025",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "intelligentjello.substack.com",
+      "feed_url": "https://intelligentjello.substack.com/feed",
+      "link_count": 1,
+      "name": "Intelligent Jello",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "chalmermagne.substack.com",
+      "feed_url": "https://chalmermagne.substack.com/feed",
+      "link_count": 1,
+      "name": "Chalmermagne",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "americasanthropologist.substack.com",
+      "feed_url": "https://americasanthropologist.substack.com/feed",
+      "link_count": 1,
+      "name": "Yana\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "epsig.substack.com",
+      "feed_url": "https://epsig.substack.com/feed",
+      "link_count": 1,
+      "name": "Evolution and Psychiatry",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "alicemaz.substack.com",
+      "feed_url": "https://alicemaz.substack.com/feed",
+      "link_count": 1,
+      "name": "alice maz",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "graboyes.substack.com",
+      "feed_url": "https://graboyes.substack.com/feed",
+      "link_count": 1,
+      "name": "Bastiat's Window",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "justismills.substack.com",
+      "feed_url": "https://justismills.substack.com/feed",
+      "link_count": 1,
+      "name": "Lift High The Muse",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "modernpower.substack.com",
+      "feed_url": "https://modernpower.substack.com/feed",
+      "link_count": 1,
+      "name": "Modern Power",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "davidsun.substack.com",
+      "feed_url": "https://davidsun.substack.com/feed",
+      "link_count": 1,
+      "name": "Outsider's Edge",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "paulmsherman.substack.com",
+      "feed_url": "https://paulmsherman.substack.com/feed",
+      "link_count": 1,
+      "name": "Consider the Oyster",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "nathanlubchenco.substack.com",
+      "feed_url": "https://nathanlubchenco.substack.com/feed",
+      "link_count": 1,
+      "name": "The Future Was Yesterday",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "artdev.substack.com",
+      "feed_url": "https://artdev.substack.com/feed",
+      "link_count": 1,
+      "name": "artdev",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "davidlebovitz.substack.com",
+      "feed_url": "https://davidlebovitz.substack.com/feed",
+      "link_count": 1,
+      "name": "David Lebovitz Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kennethrogoff.substack.com",
+      "feed_url": "https://kennethrogoff.substack.com/feed",
+      "link_count": 1,
+      "name": "Dollar Decoded",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "farmanimalwelfare.substack.com",
+      "feed_url": "https://farmanimalwelfare.substack.com/feed",
+      "link_count": 1,
+      "name": "Coefficient Giving farm animal welfare newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "gideons.substack.com",
+      "feed_url": "https://gideons.substack.com/feed",
+      "link_count": 1,
+      "name": "Gideon's Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "synthesizedsunsets.substack.com",
+      "feed_url": "https://synthesizedsunsets.substack.com/feed",
+      "link_count": 1,
+      "name": "Synthesized Sunsets",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kyla.substack.com",
+      "feed_url": "https://kyla.substack.com/feed",
+      "link_count": 1,
+      "name": "Kyla\u2019s Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "bigifftrue.substack.com",
+      "feed_url": "https://bigifftrue.substack.com/feed",
+      "link_count": 1,
+      "name": "Big iff True",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "toddkashdan.substack.com",
+      "feed_url": "https://toddkashdan.substack.com/feed",
+      "link_count": 1,
+      "name": "Provoked with Dr. Todd Kashdan",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "davidduncan.substack.com",
+      "feed_url": "https://davidduncan.substack.com/feed",
+      "link_count": 1,
+      "name": "Decoded",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kittenbeloved.substack.com",
+      "feed_url": "https://kittenbeloved.substack.com/feed",
+      "link_count": 1,
+      "name": "Adorable and Harmless",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "glennmercer.substack.com",
+      "feed_url": "https://glennmercer.substack.com/feed",
+      "link_count": 1,
+      "name": "Car Charts",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "tomasmandl.substack.com",
+      "feed_url": "https://tomasmandl.substack.com/feed",
+      "link_count": 1,
+      "name": "Tom\u00e1s\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "daviesrichard.substack.com",
+      "feed_url": "https://daviesrichard.substack.com/feed",
+      "link_count": 1,
+      "name": "Economics Observatory",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "oyyy.substack.com",
+      "feed_url": "https://oyyy.substack.com/feed",
+      "link_count": 1,
+      "name": "OY\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "musaalgharbi.substack.com",
+      "feed_url": "https://musaalgharbi.substack.com/feed",
+      "link_count": 1,
+      "name": "Symbolic Capital(ism)",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "tomtugendhat.substack.com",
+      "feed_url": "https://tomtugendhat.substack.com/feed",
+      "link_count": 1,
+      "name": "Dispatches",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thebsdetector.substack.com",
+      "feed_url": "https://thebsdetector.substack.com/feed",
+      "link_count": 1,
+      "name": "The BS Detector",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "karinabao.substack.com",
+      "feed_url": "https://karinabao.substack.com/feed",
+      "link_count": 1,
+      "name": "Karina Bao",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "jonathannankivell.substack.com",
+      "feed_url": "https://jonathannankivell.substack.com/feed",
+      "link_count": 1,
+      "name": "Jonathan\u2019s Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "janhavinilekani.substack.com",
+      "feed_url": "https://janhavinilekani.substack.com/feed",
+      "link_count": 1,
+      "name": "Janhavi Nilekani\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "someunpleasant.substack.com",
+      "feed_url": "https://someunpleasant.substack.com/feed",
+      "link_count": 1,
+      "name": "Some Unpleasant Arithmetic",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "empiricrafting.substack.com",
+      "feed_url": "https://empiricrafting.substack.com/feed",
+      "link_count": 1,
+      "name": "Justified Posteriors",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "jakesolomonwrites.substack.com",
+      "feed_url": "https://jakesolomonwrites.substack.com/feed",
+      "link_count": 1,
+      "name": "Jake Solomon",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "uncomfortableconversations.substack.com",
+      "feed_url": "https://uncomfortableconversations.substack.com/feed",
+      "link_count": 1,
+      "name": "Uncomfortable Conversations with Josh Szeps",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "freakpalace.substack.com",
+      "feed_url": "https://freakpalace.substack.com/feed",
+      "link_count": 1,
+      "name": "Freak Palace",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "davidoks.substack.com",
+      "feed_url": "https://davidoks.substack.com/feed",
+      "link_count": 1,
+      "name": "David Oks",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "joewalker.substack.com",
+      "feed_url": "https://joewalker.substack.com/feed",
+      "link_count": 1,
+      "name": "Joseph Noel Walker",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "mistakesweremade.substack.com",
+      "feed_url": "https://mistakesweremade.substack.com/feed",
+      "link_count": 1,
+      "name": "Mistakes Were Made",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "sfhwebb.substack.com",
+      "feed_url": "https://sfhwebb.substack.com/feed",
+      "link_count": 1,
+      "name": "Wallenstein's Camp",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "aparnacd.substack.com",
+      "feed_url": "https://aparnacd.substack.com/feed",
+      "link_count": 1,
+      "name": "ACD",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "arachnemag.substack.com",
+      "feed_url": "https://arachnemag.substack.com/feed",
+      "link_count": 1,
+      "name": "Arachne",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thegrandstrategy.substack.com",
+      "feed_url": "https://thegrandstrategy.substack.com/feed",
+      "link_count": 1,
+      "name": "The Grand Strategy",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "eigenmoomin.substack.com",
+      "feed_url": "https://eigenmoomin.substack.com/feed",
+      "link_count": 1,
+      "name": "eigenmoomin",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "joshuatravisbrown.substack.com",
+      "feed_url": "https://joshuatravisbrown.substack.com/feed",
+      "link_count": 1,
+      "name": "The Leading Edge",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "arctotherium.substack.com",
+      "feed_url": "https://arctotherium.substack.com/feed",
+      "link_count": 1,
+      "name": "Not With a Bang",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "brucebartlett.substack.com",
+      "feed_url": "https://brucebartlett.substack.com/feed",
+      "link_count": 1,
+      "name": "Bartlett's Notations",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "hashcollision.substack.com",
+      "feed_url": "https://hashcollision.substack.com/feed",
+      "link_count": 1,
+      "name": "Hash Collision",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thinkinganddata.substack.com",
+      "feed_url": "https://thinkinganddata.substack.com/feed",
+      "link_count": 1,
+      "name": "Thinkinganddata\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "veridelisi.substack.com",
+      "feed_url": "https://veridelisi.substack.com/feed",
+      "link_count": 1,
+      "name": "VeriDelisi",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "andymasley.substack.com",
+      "feed_url": "https://andymasley.substack.com/feed",
+      "link_count": 1,
+      "name": "Andy Masley",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "artificialinvestment.substack.com",
+      "feed_url": "https://artificialinvestment.substack.com/feed",
+      "link_count": 1,
+      "name": "Artificial Investment",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "emwhitenoise.substack.com",
+      "feed_url": "https://emwhitenoise.substack.com/feed",
+      "link_count": 1,
+      "name": "emwhitenoise",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "espionage.substack.com",
+      "feed_url": "https://espionage.substack.com/feed",
+      "link_count": 1,
+      "name": "Espionage&",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "forecastingresearch.substack.com",
+      "feed_url": "https://forecastingresearch.substack.com/feed",
+      "link_count": 1,
+      "name": "Forecasting Research Institute",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "davidgoodhart.substack.com",
+      "feed_url": "https://davidgoodhart.substack.com/feed",
+      "link_count": 1,
+      "name": "A Goodhart is Hard to Find",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "elizabethvannostrand.substack.com",
+      "feed_url": "https://elizabethvannostrand.substack.com/feed",
+      "link_count": 1,
+      "name": "Elizabeth Van Nostrand",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "johnstone.substack.com",
+      "feed_url": "https://johnstone.substack.com/feed",
+      "link_count": 1,
+      "name": "John Stone's Blog",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "carlhendrick.substack.com",
+      "feed_url": "https://carlhendrick.substack.com/feed",
+      "link_count": 1,
+      "name": "The Learning Dispatch",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kevinkelly.substack.com",
+      "feed_url": "https://kevinkelly.substack.com/feed",
+      "link_count": 1,
+      "name": "KK",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "afoolscholar.substack.com",
+      "feed_url": "https://afoolscholar.substack.com/feed",
+      "link_count": 1,
+      "name": "A Fool Scholar",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "uatx.substack.com",
+      "feed_url": "https://uatx.substack.com/feed",
+      "link_count": 1,
+      "name": "University of Austin",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "josephlevine.substack.com",
+      "feed_url": "https://josephlevine.substack.com/feed",
+      "link_count": 1,
+      "name": "Joseph Levine's Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "probablyinteresting.substack.com",
+      "feed_url": "https://probablyinteresting.substack.com/feed",
+      "link_count": 1,
+      "name": "Kent Hendricks",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "mikepesca.substack.com",
+      "feed_url": "https://mikepesca.substack.com/feed",
+      "link_count": 1,
+      "name": "Mike Pesca",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "arpitrage.substack.com",
+      "feed_url": "https://arpitrage.substack.com/feed",
+      "link_count": 1,
+      "name": "Arpitrage",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "laurenzguenther.substack.com",
+      "feed_url": "https://laurenzguenther.substack.com/feed",
+      "link_count": 1,
+      "name": "Laurenz Guenther",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "skepticalclarity.substack.com",
+      "feed_url": "https://skepticalclarity.substack.com/feed",
+      "link_count": 1,
+      "name": "Skeptical Clarity",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "glennloury.substack.com",
+      "feed_url": "https://glennloury.substack.com/feed",
+      "link_count": 1,
+      "name": "Glenn Loury",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "laurenleek.substack.com",
+      "feed_url": "https://laurenleek.substack.com/feed",
+      "link_count": 1,
+      "name": "Lauren\u2019s data Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kristinafort.substack.com",
+      "feed_url": "https://kristinafort.substack.com/feed",
+      "link_count": 1,
+      "name": "Cultured Curiosity",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "fahadhasin.substack.com",
+      "feed_url": "https://fahadhasin.substack.com/feed",
+      "link_count": 1,
+      "name": "First draft",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "buildingoptimism.substack.com",
+      "feed_url": "https://buildingoptimism.substack.com/feed",
+      "link_count": 1,
+      "name": "Building Optimism",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "parconley.substack.com",
+      "feed_url": "https://parconley.substack.com/feed",
+      "link_count": 1,
+      "name": "Parker's Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "perpetuo.substack.com",
+      "feed_url": "https://perpetuo.substack.com/feed",
+      "link_count": 1,
+      "name": "Perpetuo",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "scottwinship.substack.com",
+      "feed_url": "https://scottwinship.substack.com/feed",
+      "link_count": 1,
+      "name": "First World Problems",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "ideasindevelopment.substack.com",
+      "feed_url": "https://ideasindevelopment.substack.com/feed",
+      "link_count": 1,
+      "name": "Ideas in Development",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "vblgoldfix.substack.com",
+      "feed_url": "https://vblgoldfix.substack.com/feed",
+      "link_count": 1,
+      "name": "GoldFix",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thomaaaskirk.substack.com",
+      "feed_url": "https://thomaaaskirk.substack.com/feed",
+      "link_count": 1,
+      "name": "Terribly Sensible",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "aiprospects.substack.com",
+      "feed_url": "https://aiprospects.substack.com/feed",
+      "link_count": 1,
+      "name": "AI Prospects: Understanding Options in a Hypercapable World",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "factsandreason.substack.com",
+      "feed_url": "https://factsandreason.substack.com/feed",
+      "link_count": 1,
+      "name": "Facts And Reason",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "post.substack.com",
+      "feed_url": "https://post.substack.com/feed",
+      "link_count": 1,
+      "name": "The Substack Post",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "pauljun.substack.com",
+      "feed_url": "https://pauljun.substack.com/feed",
+      "link_count": 1,
+      "name": "Kimchi & Gabagool",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "howpoliticsworks.substack.com",
+      "feed_url": "https://howpoliticsworks.substack.com/feed",
+      "link_count": 1,
+      "name": "How Politics Works",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "erikschiskin.substack.com",
+      "feed_url": "https://erikschiskin.substack.com/feed",
+      "link_count": 1,
+      "name": "Erik's Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "klarafeenstra.substack.com",
+      "feed_url": "https://klarafeenstra.substack.com/feed",
+      "link_count": 1,
+      "name": "Klara Feenstra",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "helendewitt.substack.com",
+      "feed_url": "https://helendewitt.substack.com/feed",
+      "link_count": 1,
+      "name": "Helen DeWitt",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "strangecosmos.substack.com",
+      "feed_url": "https://strangecosmos.substack.com/feed",
+      "link_count": 1,
+      "name": "Strange Cosmos by Yarrow Bouchard",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "musgrave.substack.com",
+      "feed_url": "https://musgrave.substack.com/feed",
+      "link_count": 1,
+      "name": "Systematic Hatreds",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "stephdiane.substack.com",
+      "feed_url": "https://stephdiane.substack.com/feed",
+      "link_count": 1,
+      "name": "stephanie wakefield",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "samuelalbanie.substack.com",
+      "feed_url": "https://samuelalbanie.substack.com/feed",
+      "link_count": 1,
+      "name": "Samuel Albanie",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "professortimkane.substack.com",
+      "feed_url": "https://professortimkane.substack.com/feed",
+      "link_count": 1,
+      "name": "Professor Tim Kane",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "rshinde.substack.com",
+      "feed_url": "https://rshinde.substack.com/feed",
+      "link_count": 1,
+      "name": "The Indic Prism",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "xpandinhorizon.substack.com",
+      "feed_url": "https://xpandinhorizon.substack.com/feed",
+      "link_count": 1,
+      "name": "Xpanding Horizons",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "philiptrammell.substack.com",
+      "feed_url": "https://philiptrammell.substack.com/feed",
+      "link_count": 1,
+      "name": "Philosopher count",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "rajeshachanta.substack.com",
+      "feed_url": "https://rajeshachanta.substack.com/feed",
+      "link_count": 1,
+      "name": "Selective Amnesia",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "afraw.substack.com",
+      "feed_url": "https://afraw.substack.com/feed",
+      "link_count": 1,
+      "name": "Concurrent",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "minutes.substack.com",
+      "feed_url": "https://minutes.substack.com/feed",
+      "link_count": 1,
+      "name": "Minutes",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "stephenkinsella.substack.com",
+      "feed_url": "https://stephenkinsella.substack.com/feed",
+      "link_count": 1,
+      "name": "Stephen Kinsella's Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "samkriss.substack.com",
+      "feed_url": "https://samkriss.substack.com/feed",
+      "link_count": 1,
+      "name": "Numb at the Lodge",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kevinrafto.substack.com",
+      "feed_url": "https://kevinrafto.substack.com/feed",
+      "link_count": 1,
+      "name": "Kevin Rafto",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "plausiblyexogenous.substack.com",
+      "feed_url": "https://plausiblyexogenous.substack.com/feed",
+      "link_count": 1,
+      "name": "Plausibly Exogenous",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "theprogressnetwork.substack.com",
+      "feed_url": "https://theprogressnetwork.substack.com/feed",
+      "link_count": 1,
+      "name": "The Progress Network",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "nationofartisans.substack.com",
+      "feed_url": "https://nationofartisans.substack.com/feed",
+      "link_count": 1,
+      "name": "Nation of Artisans",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "staytuned.substack.com",
+      "feed_url": "https://staytuned.substack.com/feed",
+      "link_count": 1,
+      "name": "Stay Tuned with Preet Bharara",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "robertc12.substack.com",
+      "feed_url": "https://robertc12.substack.com/feed",
+      "link_count": 1,
+      "name": "The Laughing Ape",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "kappel1.substack.com",
+      "feed_url": "https://kappel1.substack.com/feed",
+      "link_count": 1,
+      "name": "Robert Kappel",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "freeradicalspodcast.substack.com",
+      "feed_url": "https://freeradicalspodcast.substack.com/feed",
+      "link_count": 1,
+      "name": "Free Radicals",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "underpromoted.substack.com",
+      "feed_url": "https://underpromoted.substack.com/feed",
+      "link_count": 1,
+      "name": "Underpromoted",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "intelligenceage.substack.com",
+      "feed_url": "https://intelligenceage.substack.com/feed",
+      "link_count": 1,
+      "name": "Intelligence Age",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "anastasiagamick.substack.com",
+      "feed_url": "https://anastasiagamick.substack.com/feed",
+      "link_count": 1,
+      "name": "Anastasia Gamick",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "ericwrandolph.substack.com",
+      "feed_url": "https://ericwrandolph.substack.com/feed",
+      "link_count": 1,
+      "name": "30 Months in Iran",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "timworstall.substack.com",
+      "feed_url": "https://timworstall.substack.com/feed",
+      "link_count": 1,
+      "name": "It's all obvious or trivial except....",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "visserlabs.substack.com",
+      "feed_url": "https://visserlabs.substack.com/feed",
+      "link_count": 1,
+      "name": "Jordi Visser Macro-AI-Crypto Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "religionandbusiness.substack.com",
+      "feed_url": "https://religionandbusiness.substack.com/feed",
+      "link_count": 1,
+      "name": "The Religion and Business Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "technologik.substack.com",
+      "feed_url": "https://technologik.substack.com/feed",
+      "link_count": 1,
+      "name": "Technologik",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thatvastvariety.substack.com",
+      "feed_url": "https://thatvastvariety.substack.com/feed",
+      "link_count": 1,
+      "name": "Matt Beard's Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "republicofscience.substack.com",
+      "feed_url": "https://republicofscience.substack.com/feed",
+      "link_count": 1,
+      "name": "The Republic of Science",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "vamoul.substack.com",
+      "feed_url": "https://vamoul.substack.com/feed",
+      "link_count": 1,
+      "name": "Horace & friends",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "malharmanek.substack.com",
+      "feed_url": "https://malharmanek.substack.com/feed",
+      "link_count": 1,
+      "name": "Mr Philomath",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "indevelopmentmag.substack.com",
+      "feed_url": "https://indevelopmentmag.substack.com/feed",
+      "link_count": 1,
+      "name": "In Development Magazine",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "navvaidhyanathanatvysdomai.substack.com",
+      "feed_url": "https://navvaidhyanathanatvysdomai.substack.com/feed",
+      "link_count": 1,
+      "name": "Nav\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "listomania.substack.com",
+      "feed_url": "https://listomania.substack.com/feed",
+      "link_count": 1,
+      "name": "Listomania",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "sophisms.substack.com",
+      "feed_url": "https://sophisms.substack.com/feed",
+      "link_count": 1,
+      "name": "Sophisms",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "justinross.substack.com",
+      "feed_url": "https://justinross.substack.com/feed",
+      "link_count": 1,
+      "name": "Capital & Capitol",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "amardashehu.substack.com",
+      "feed_url": "https://amardashehu.substack.com/feed",
+      "link_count": 1,
+      "name": "Amarda Shehu",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "samirvarma.substack.com",
+      "feed_url": "https://samirvarma.substack.com/feed",
+      "link_count": 1,
+      "name": "Samir Varma",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "tomenergy.substack.com",
+      "feed_url": "https://tomenergy.substack.com/feed",
+      "link_count": 1,
+      "name": "Tom\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "bradmehldau.substack.com",
+      "feed_url": "https://bradmehldau.substack.com/feed",
+      "link_count": 1,
+      "name": "Watching Rome Burn",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "janrosenow.substack.com",
+      "feed_url": "https://janrosenow.substack.com/feed",
+      "link_count": 1,
+      "name": "Bright Spots",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "allakeselman.substack.com",
+      "feed_url": "https://allakeselman.substack.com/feed",
+      "link_count": 1,
+      "name": "The Receding Tram",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "leobenedictus.substack.com",
+      "feed_url": "https://leobenedictus.substack.com/feed",
+      "link_count": 1,
+      "name": "Interesting Data",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "tinamarshdalton.substack.com",
+      "feed_url": "https://tinamarshdalton.substack.com/feed",
+      "link_count": 1,
+      "name": "Words to the WHYs on Healthcare",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "nateglubish.substack.com",
+      "feed_url": "https://nateglubish.substack.com/feed",
+      "link_count": 1,
+      "name": "Nate Glubish",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "reillychandler.substack.com",
+      "feed_url": "https://reillychandler.substack.com/feed",
+      "link_count": 1,
+      "name": "Front Range Economics",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "elizabethxli.substack.com",
+      "feed_url": "https://elizabethxli.substack.com/feed",
+      "link_count": 1,
+      "name": "The Self-Indication Project",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "opentodebate.substack.com",
+      "feed_url": "https://opentodebate.substack.com/feed",
+      "link_count": 1,
+      "name": "Open to Debate",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "compactmag.substack.com",
+      "feed_url": "https://compactmag.substack.com/feed",
+      "link_count": 1,
+      "name": "Compact\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "maartenboudry.substack.com",
+      "feed_url": "https://maartenboudry.substack.com/feed",
+      "link_count": 1,
+      "name": "Maarten Boudry\u2019s Substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "yashenghuang.substack.com",
+      "feed_url": "https://yashenghuang.substack.com/feed",
+      "link_count": 1,
+      "name": "Yasheng Huang",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "afshine.substack.com",
+      "feed_url": "https://afshine.substack.com/feed",
+      "link_count": 1,
+      "name": "Afshine\u2019s Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "soniafpearson.substack.com",
+      "feed_url": "https://soniafpearson.substack.com/feed",
+      "link_count": 1,
+      "name": "Thoughts, Poems, and Bad Ideas",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "mollyyoung.substack.com",
+      "feed_url": "https://mollyyoung.substack.com/feed",
+      "link_count": 1,
+      "name": "The Life and Errors of Molly Young",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "geometricinvestor.substack.com",
+      "feed_url": "https://geometricinvestor.substack.com/feed",
+      "link_count": 1,
+      "name": "GeometricInvestor",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "marcusnunes.substack.com",
+      "feed_url": "https://marcusnunes.substack.com/feed",
+      "link_count": 1,
+      "name": "Money Fetish",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "emilyballesteros.substack.com",
+      "feed_url": "https://emilyballesteros.substack.com/feed",
+      "link_count": 1,
+      "name": "Personal Development",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "splittinginfinity.substack.com",
+      "feed_url": "https://splittinginfinity.substack.com/feed",
+      "link_count": 1,
+      "name": "Splitting Infinity",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "jodiettenberg.substack.com",
+      "feed_url": "https://jodiettenberg.substack.com/feed",
+      "link_count": 1,
+      "name": "Curious About Everything",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "chatgptpro.substack.com",
+      "feed_url": "https://chatgptpro.substack.com/feed",
+      "link_count": 1,
+      "name": "ChatGPT for Pros",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "yakimenko.substack.com",
+      "feed_url": "https://yakimenko.substack.com/feed",
+      "link_count": 1,
+      "name": "FILM FILM FILM",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "horizonlaunchpad.substack.com",
+      "feed_url": "https://horizonlaunchpad.substack.com/feed",
+      "link_count": 1,
+      "name": "Launchpad",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "desertphilosophy.substack.com",
+      "feed_url": "https://desertphilosophy.substack.com/feed",
+      "link_count": 1,
+      "name": "Desert Philosophy",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thefreemanmag.substack.com",
+      "feed_url": "https://thefreemanmag.substack.com/feed",
+      "link_count": 1,
+      "name": "The Freeman",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "asteriskmag.substack.com",
+      "feed_url": "https://asteriskmag.substack.com/feed",
+      "link_count": 1,
+      "name": "Asterisk Magazine",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "agoodhardstare.substack.com",
+      "feed_url": "https://agoodhardstare.substack.com/feed",
+      "link_count": 1,
+      "name": "A Good Hard Stare",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "danielfetz.substack.com",
+      "feed_url": "https://danielfetz.substack.com/feed",
+      "link_count": 1,
+      "name": "Daniel Fetz",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "astropoliticswithoutromance.substack.com",
+      "feed_url": "https://astropoliticswithoutromance.substack.com/feed",
+      "link_count": 1,
+      "name": "Max Harden",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thefp.com",
+      "feed_url": "https://thefp.com/feed",
+      "link_count": 113,
+      "name": "The Free Press",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "commonreader.co.uk",
+      "feed_url": "https://commonreader.co.uk/feed",
+      "link_count": 41,
+      "name": "The Common Reader",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "slowboring.com",
+      "feed_url": "https://slowboring.com/feed",
+      "link_count": 34,
+      "name": "Slow Boring",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "chinatalk.media",
+      "feed_url": "https://chinatalk.media/feed",
+      "link_count": 22,
+      "name": "ChinaTalk",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "betonit.ai",
+      "feed_url": "https://betonit.ai/feed",
+      "link_count": 22,
+      "name": "Bet On It",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "cpsi.media",
+      "feed_url": "https://cpsi.media/feed",
+      "link_count": 21,
+      "name": "CPSI Newsletters",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "hyperdimensional.co",
+      "feed_url": "https://hyperdimensional.co/feed",
+      "link_count": 20,
+      "name": "Hyperdimensional",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thefitzwilliam.com",
+      "feed_url": "https://thefitzwilliam.com/feed",
+      "link_count": 19,
+      "name": "The Fitzwilliam",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "richardhanania.com",
+      "feed_url": "https://richardhanania.com/feed",
+      "link_count": 18,
+      "name": "Richard Hanania's Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "dwarkeshpatel.com",
+      "feed_url": "https://dwarkeshpatel.com/feed",
+      "link_count": 16,
+      "name": "Dwarkesh Podcast",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "gwern.net",
+      "feed_url": "https://gwern.net/feed",
+      "link_count": 12,
+      "name": "Gwern.net Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": "gwern.substack.com"
+    },
+    {
+      "canonical_domain": "strangeloopcanon.com",
+      "feed_url": "https://strangeloopcanon.com/feed",
+      "link_count": 12,
+      "name": "Strange Loop Canon",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "siliconcontinent.com",
+      "feed_url": "https://siliconcontinent.com/feed",
+      "link_count": 12,
+      "name": "Silicon Continent",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "worksinprogress.news",
+      "feed_url": "https://worksinprogress.news/feed",
+      "link_count": 10,
+      "name": "The Works in Progress Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "davidoks.blog",
+      "feed_url": "https://davidoks.blog/feed",
+      "link_count": 9,
+      "name": "David Oks",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "unchartedterritories.tomaspueyo.com",
+      "feed_url": "https://unchartedterritories.tomaspueyo.com/feed",
+      "link_count": 5,
+      "name": "Uncharted Territories",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "theeggandtherock.com",
+      "feed_url": "https://theeggandtherock.com/feed",
+      "link_count": 5,
+      "name": "THE EGG AND THE ROCK",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "natesilver.net",
+      "feed_url": "https://natesilver.net/feed",
+      "link_count": 4,
+      "name": "Silver Bulletin",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "elidourado.com",
+      "feed_url": "https://elidourado.com/feed",
+      "link_count": 4,
+      "name": "Eli Dourado",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "cantgetmuchhigher.com",
+      "feed_url": "https://cantgetmuchhigher.com/feed",
+      "link_count": 4,
+      "name": "Can't Get Much Higher",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "dwarkesh.com",
+      "feed_url": "https://dwarkesh.com/feed",
+      "link_count": 4,
+      "name": "Dwarkesh Podcast",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "american-innocence.com",
+      "feed_url": "https://american-innocence.com/feed",
+      "link_count": 4,
+      "name": "American Innocence by Anna G\u00e1t",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "newsletter.rootsofprogress.org",
+      "feed_url": "https://newsletter.rootsofprogress.org/feed",
+      "link_count": 4,
+      "name": "The Roots of Progress",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thebulwark.com",
+      "feed_url": "https://thebulwark.com/feed",
+      "link_count": 3,
+      "name": "The Bulwark",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "blog.eladgil.com",
+      "feed_url": "https://blog.eladgil.com/feed",
+      "link_count": 3,
+      "name": "Elad Blog",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "joshbarro.com",
+      "feed_url": "https://joshbarro.com/feed",
+      "link_count": 3,
+      "name": "Very Serious",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "sambowman.co",
+      "feed_url": "https://sambowman.co/feed",
+      "link_count": 3,
+      "name": "Consumer Surplus",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "aisnakeoil.com",
+      "feed_url": "https://aisnakeoil.com/feed",
+      "link_count": 3,
+      "name": "AI as Normal Technology",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "econforeverybody.com",
+      "feed_url": "https://econforeverybody.com/feed",
+      "link_count": 3,
+      "name": "EconForEverybody",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "smallpotatoes.paulbloom.net",
+      "feed_url": "https://smallpotatoes.paulbloom.net/feed",
+      "link_count": 3,
+      "name": "Small Potatoes",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "read.lukeburgis.com",
+      "feed_url": "https://read.lukeburgis.com/feed",
+      "link_count": 3,
+      "name": "Luke Burgis Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "recursiveadaptation.com",
+      "feed_url": "https://recursiveadaptation.com/feed",
+      "link_count": 3,
+      "name": "Recursive Adaptation",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "model-thinking.com",
+      "feed_url": "https://model-thinking.com/feed",
+      "link_count": 3,
+      "name": "Model Thinking",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "fashionablylatetakes.com",
+      "feed_url": "https://fashionablylatetakes.com/feed",
+      "link_count": 3,
+      "name": "Fashionably Late Takes",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "writing.antonleicht.me",
+      "feed_url": "https://writing.antonleicht.me/feed",
+      "link_count": 3,
+      "name": "Threading the Needle",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "alexkesin.com",
+      "feed_url": "https://alexkesin.com/feed",
+      "link_count": 3,
+      "name": "Alex Kesin's Pharmacopoeia",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "blog.cosmos-institute.org",
+      "feed_url": "https://blog.cosmos-institute.org/feed",
+      "link_count": 3,
+      "name": "Cosmos Institute",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "newsletter.humanprogress.org",
+      "feed_url": "https://newsletter.humanprogress.org/feed",
+      "link_count": 3,
+      "name": "Human Progress",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "progreshion.blog",
+      "feed_url": "https://progreshion.blog/feed",
+      "link_count": 3,
+      "name": "Salvador\u2019s Blog",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "zixuanma.blog",
+      "feed_url": "https://zixuanma.blog/feed",
+      "link_count": 3,
+      "name": "Zixuan Ma\u2019s Blog",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "pursuitofliberalism.com",
+      "feed_url": "https://pursuitofliberalism.com/feed",
+      "link_count": 3,
+      "name": "The Pursuit of Liberalism",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "jonstokes.com",
+      "feed_url": "https://jonstokes.com/feed",
+      "link_count": 2,
+      "name": "jonstokes.com",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thestudiesshow.com",
+      "feed_url": "https://thestudiesshow.com/feed",
+      "link_count": 2,
+      "name": "The Studies Show",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "blog.spec.tech",
+      "feed_url": "https://blog.spec.tech/feed",
+      "link_count": 2,
+      "name": "Spectech Newsletter",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "experimental-history.com",
+      "feed_url": "https://experimental-history.com/feed",
+      "link_count": 2,
+      "name": "Experimental History",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "apricitas.io",
+      "feed_url": "https://apricitas.io/feed",
+      "link_count": 2,
+      "name": "Apricitas Economics",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "brief.bismarckanalysis.com",
+      "feed_url": "https://brief.bismarckanalysis.com/feed",
+      "link_count": 2,
+      "name": "Bismarck Brief",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "owlposting.com",
+      "feed_url": "https://owlposting.com/feed",
+      "link_count": 2,
+      "name": "Owl Posting",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "clunyjournal.com",
+      "feed_url": "https://clunyjournal.com/feed",
+      "link_count": 2,
+      "name": "Cluny Journal",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "wisdomofcrowds.live",
+      "feed_url": "https://wisdomofcrowds.live/feed",
+      "link_count": 2,
+      "name": "Wisdom of Crowds",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "default.blog",
+      "feed_url": "https://default.blog/feed",
+      "link_count": 2,
+      "name": "default.blog",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "aarthiandsriram.com",
+      "feed_url": "https://aarthiandsriram.com/feed",
+      "link_count": 2,
+      "name": "The Aarthi and Sriram Show",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "scientificdiscovery.dev",
+      "feed_url": "https://scientificdiscovery.dev/feed",
+      "link_count": 2,
+      "name": "Scientific Discovery",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "eatingpolicy.com",
+      "feed_url": "https://eatingpolicy.com/feed",
+      "link_count": 2,
+      "name": "Eating Policy",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "corememory.com",
+      "feed_url": "https://corememory.com/feed",
+      "link_count": 2,
+      "name": "Core Memory",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "metropolitanreview.org",
+      "feed_url": "https://metropolitanreview.org/feed",
+      "link_count": 2,
+      "name": "The Metropolitan Review",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "nodumbideas.com",
+      "feed_url": "https://nodumbideas.com/feed",
+      "link_count": 2,
+      "name": "No Dumb Ideas",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "thedailyeconomy.org",
+      "feed_url": "https://thedailyeconomy.org/feed",
+      "link_count": 2,
+      "name": "The Daily Economy",
+      "source": "archive_derived",
+      "substack_subdomain": "debtdispatch.substack.com"
+    },
+    {
+      "canonical_domain": "jasmi.news",
+      "feed_url": "https://jasmi.news/feed",
+      "link_count": 2,
+      "name": "@jasmine\u2019s substack",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "theunseenandtheunsaid.com",
+      "feed_url": "https://theunseenandtheunsaid.com/feed",
+      "link_count": 2,
+      "name": "The Unseen and The Unsaid",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "theargumentmag.com",
+      "feed_url": "https://theargumentmag.com/feed",
+      "link_count": 2,
+      "name": "The Argument",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "chrisbrunet.com",
+      "feed_url": "https://chrisbrunet.com/feed",
+      "link_count": 2,
+      "name": "Chris Brunet",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "endsdontjustifythemeans.com",
+      "feed_url": "https://endsdontjustifythemeans.com/feed",
+      "link_count": 2,
+      "name": "the ends don't justify the means",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "ourlongwalk.com",
+      "feed_url": "https://ourlongwalk.com/feed",
+      "link_count": 2,
+      "name": "Our Long Walk",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    },
+    {
+      "canonical_domain": "jehanazad.com",
+      "feed_url": "https://jehanazad.com/feed",
+      "link_count": 2,
+      "name": "Jehan's Radar",
+      "source": "archive_derived",
+      "substack_subdomain": null
+    }
+  ]
+}

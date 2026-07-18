@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://back.nber.org/rss/new.xml" rel="self" type="application/rss+xml" />
+    <title>National Bureau of Economic Research Working Papers</title>
+    <description>The Latest NBER Working Papers</description>
+    <link>http://www.nber.org/new.html</link>
+    <item>
+      <title>How Do State “Auto-IRA” Policies Affect Household Balance Sheets? -- by Adam Bloomfield, Ngoc Dao, Kyung Min Lee, Sita Slavov</title>
+      <description>We examine how state policies requiring firms to facilitate workplace retirement saving affect household balance sheets. Using data from the Survey of Income and Program Participation (SIPP), we compare private-sector workers likely exposed to Oregon’s Automatic-Enrollment Individual Retirement Account (Auto-IRA) policy with similar workers in not-yet-adopting states. We find that the Auto-IRA policy is associated with increases in IRA and employer-sponsored retirement plan ownership and assets. We also find increases in checking or savings account ownership and balances, as well as higher credit card debt. The results suggest that Auto-IRA policies spill over to household liquidity management and borrowing.</description>
+      <link>https://www.nber.org/papers/w35373#fromrss</link>
+      <guid>https://www.nber.org/papers/w35373#fromrss</guid>
+    </item>
+    <item>
+      <title>Let’s Chat: Leveraging Chatbot Outreach for Improved Course Performance -- by Katharine E. Meyer, Lindsay C. Page, Catherine Mata, Eric Smith, Brendan Tyler Walsh, Candice L. Fifield, Michelle Tyson, Amy E. Eremionkhale, Michael Evans, Shelby Frost, Eye Eoun Jung</title>
+      <description>This study provides pre-registered, experimental evidence on the use of non-generative artificial intelligence (AI) chatbots to support students in large-enrollment undergraduate courses. We find the chatbot messaging increased students’ final grades and engagement with academic supports, such as tutoring. Treatment effects were generally consistent across student demographics, with the exception of treated women in a Microeconomics course, who earned final grades that were seven percentage points higher than women in the control group. This study provides evidence that integrating AI-enabled outreach and communication to students in their college courses can enhance student engagement, learning, and course performance.</description>
+      <link>https://www.nber.org/papers/w35397#fromrss</link>
+      <guid>https://www.nber.org/papers/w35397#fromrss</guid>
+    </item>
+  </channel>
+</rss>

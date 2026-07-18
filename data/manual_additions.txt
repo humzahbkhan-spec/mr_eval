@@ -1,0 +1,2 @@
+# One Substack feed URL per line. Blank lines and #-comments ignored.
+# Example: https://noahpinion.substack.com/feed

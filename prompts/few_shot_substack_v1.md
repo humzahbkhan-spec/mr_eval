@@ -1,0 +1,79 @@
+# Few-shot examples — substack track (v1)
+
+75 real items Tyler Cowen linked on Marginal Revolution, in his own words (anchor + surrounding gloss from the archive). Deterministic quality-filtered, stratified-by-year sample; seed=42. Regenerate with `python -m src.build_fewshot`. See DECISIONS.md D-04/D-30.
+
+- Chartbook (2022-01-18): Tooze on Ukraine . Excellent piece.
+- The Line (2022-02-11): Here is a defense of the Freedom Convoy . You can read it for yourself, but it doesn’t change my mind. Here is I think a wiser account . I’ll say it again: “Look for strong analytical abilities, and if you don’t see it, run the other way.”…
+- Market Power Newsletter (2022-02-15): Craig Palsson, economics, and going viral on YouTube and TikTok .
+- Rafael’s Commentary (2022-02-23): Rafael Guthmann on the Roman empire and Walter Scheidel and political fragmentation .
+- Construction Physics (2022-03-05): Lessons from shipbuilding productivity .
+- David Roberts || Sparks From Culture (2022-04-24): Social media better than many people think .
+- In My Tribe (2022-05-08): The Arnold Kling proposal for network-based higher education .
+- In My Tribe (2022-05-22): Long Rob Henderson review of Talent . And Arnold Kling answers Cowen/Gross questions .
+- Future 2.0 (2022-07-22): Labour call for UK supply-side progressivism .
+- Richard Hanania's Newsletter (2022-09-12): 78 minutes . With transcript. It starts off as a normal “talent conversation,” but soon takes other paths. We discuss feminization in some detail, libertarianism too. Here is part of Richard’s summary:
+- Year Zero (2022-10-03): Proposals for reforming universities (overall I am myself not so convinced by these; it is “ground troops” that matter).
+- Huazong’s Newsletter (2022-10-24): Another take on Xi and Hu .
+- In My Tribe (2022-11-26): Arnold Kling on feminization .
+- sympathetic opposition (2022-12-11): “ how and why to be ladylike (for women with autism)…contains dune quotes as promised ”
+- Astral Codex Ten (2022-12-11): Here is the full post .
+- This Week in Africa (2023-01-12): Five trends that will shape urban Africa .
+- Bet On It (2023-01-12): On immigration (and authority) Daniel Klein is correct .
+- Construction Physics (2023-01-12): Roman vs. modern concrete , updated and revised.
+- Smaller Circles (2023-01-31): The Steph Curry practice story .
+- The Cognitive Revolution (2023-02-28): Nathan Labenz on many things GPT . And new Windows update will bring AI-powered Bing to the taskbar .
+- In My Tribe (2023-03-02): Arnold Kling on LLMs .
+- The Rambler (2023-03-07): Katherine Boyle on suffering .
+- Dwarkesh Podcast (2023-05-04): Dwarkesh on LBJ .
+- Silver Bulletin (2023-06-18): Nate Silver on Jokic .
+- In My Tribe (2023-07-07): Libertarianism as a warning system .
+- Marc Andreessen Substack (2023-07-15): @pmarca on the cage match .
+- Never Met a Science (2023-07-24): TC as Information Monster .
+- The Popehat Report (2023-08-03): On the Trump indictment .
+- The Great Gender Divergence (2023-08-26): That is only part of the argument, here is the entire piece .
+- Don't Worry About the Vase (2023-08-31): Zvi on Gemini, and many other AI matters .
+- Bet On It (2024-01-05): I follow with “The Weird Is Right,” most notably with the essay, “A Non-Conformist’s Guide to Success in a Conformist World.” Yes, the world does punish non-conformists, but so sporadically and thoughtlessly than the crafty can usually…
+- The Fitzwilliam (2024-03-12): Henry Oliver on James Joyce .
+- The Capitalism and Freedom in the 21st Century Podcast (2024-03-14): Steve Levitt anecdote: economics has found its Bill Laimbeer . Other excellent anecdotes in the thread. And Levitt on publishing and academia , recommended. This superb podcast episode is a real coup for Jon Hartley, transcript also at the…
+- The Weekly Anthropocene (2024-03-19): He is a podcaster who mainly does transcripts. Our discussion was largely but by no means entirely about climate change, here is one excerpt:
+- CPSI Newsletters (2024-04-27): Colonialism and progress .
+- Same Difference (2024-04-30): Good piece on Derek Parfit .
+- Don't Worry About the Vase (2024-06-25): Zvi on Claude Sonnet 3.5 .
+- Scott's Mixtape Substack (2024-06-26): AI meme generator . And using Claude for econometrics .
+- The Archimedean Point (2024-08-28): More on the French post-election .
+- Wisdom of Crowds (2024-10-04): From the excellent Katherine Dee , here is just one excerpt:
+- default.blog (2024-10-04): Much has been said about memes as art and the collective labor and imagination that goes into their creation, but it extends further than that. It’s not just memes. Creating mood boards on Pinterest or curating aesthetics on TikTok are…
+- Nabeel S. Qureshi (2024-10-15): Here is a new essay by Nabeel Qureshi , excerpt:
+- Silicon Continent (2024-11-03): Pieter Garicano , WDC and Europe, general career support, writing on Europe, progress, and technology.
+- Digital Spirits (2024-11-25): How AI is improving the energy sector .
+- Scientific Discovery (2024-12-10): Saloni on five medical breakthroughs from 2024 .
+- substack.com (2025-01-13): If all I knew were this “exchange,” I would conclude that o1 and o1 pro were better economists — much better — than one of our most recent Nobel Laureates, and also the top cited economist of his generation. Noah Smith also is critical .
+- ChinaTalk (2025-01-29): Chinese views on DeepSeek . And Chinese music AI, Yue, the model song . And Chinese robot dance . And a poem from R1 . And R1 wants more mood affiliation from Yglesias .
+- Intelligent Jello (2025-02-13): Sending Sora to film school .
+- Flyover Takes (2025-04-25): Listening to classical music for one year .
+- substack.com (2025-05-08): Trade deficits are an even smaller amount of GDP. U.S. imports of manufactured goods minus exports are equal to about 4% of GDP per year. Our trade deficit with China is about 1% of GDP .
+- Solar Light (2025-05-26): Lydia Laurenson .
+- @jasmine’s substack (2025-06-07): The evolution of one person’s views on the tech right .
+- Janhavi Nilekani’s Substack (2025-07-25): Janhavi Nilekani on inclusivity in health care .
+- the ends don't justify the means (2025-08-30): Here is Rebecca’s Substack and podcast more generally , the emphasis is on people doing philosophy.
+- the Human Carbohydrate (2025-09-03): Sam Glover and Stella Tsantekidou , free speech in the UK.
+- not not Talmud (2025-10-06): In praise of the Faroe Islands .
+- The Works in Progress Newsletter (2025-10-14): Anton Howes on Joel Mokyr .
+- A Goodhart is Hard to Find (2025-11-27): David Goodhart on Britain .
+- The Common Reader (2025-12-18): Henry Oliver on Kiran Desai .
+- The Bass Line (2025-12-30): Ulkar on Kodaly and the cello .
+- Don't Worry About the Vase (2026-01-08): Advancements in self-driving cars .
+- Forked Lightning (2026-01-12): David Deming on learning with generative AI .
+- Second Voice (2026-01-14): On Kant, Mercor, and poetry aesthetics .
+- The Free Press (2026-01-22): That is the topic of my latest Free Press column , here is one excerpt:
+- The Common Reader (2026-02-09): Henry Oliver visits Shenandoah .
+- Numb at the Lodge (2026-02-16): The century of the maxxer (“How many apricots can fit in your mouth?”). Excellent piece.
+- It's all obvious or trivial except.... (2026-03-02): More on the recent climate change estimate . It seems the paper should not have been published?
+- Out of Sample (2026-03-05): The economics of context engineering .
+- Jordi Visser Macro-AI-Crypto Substack (2026-03-18): Here is more from Jordi Visser .
+- Carlos Chavez (2026-03-23): On Christopher Sims .
+- The Religion and Business Substack (2026-04-19): Religion and business economics Substack .
+- The Free Press (2026-04-20): That is the topic of my latest Free Press column . Here is one excerpt:
+- Sam Enright's Newsletter (2026-04-27): Sam Enright links .
+- Front Range Economics (2026-05-25): Chandler Reilly , Denver, Substack on Denver and its economics .
+- Bet On It (2026-07-09): Facts about Bryan Caplan . I can vouch for many of these.

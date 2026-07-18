@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Example Substack</title>
+    <link>https://example.substack.com</link>
+    <description>A test feed</description>
+    <generator>Substack</generator>
+    <item>
+      <title>The Fresh Post</title>
+      <description>A short subtitle for the fresh post.</description>
+      <link>https://example.substack.com/p/the-fresh-post?utm_source=twitter&amp;r=abc123</link>
+      <guid>https://example.substack.com/p/the-fresh-post</guid>
+      <dc:creator>Jane Writer</dc:creator>
+      <pubDate>Tue, 14 Jul 2026 09:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>The full body of the fresh post.</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>The Stale Post</title>
+      <description>This one is older than the lookback window.</description>
+      <link>https://example.substack.com/p/the-stale-post</link>
+      <guid>https://example.substack.com/p/the-stale-post</guid>
+      <dc:creator>Jane Writer</dc:creator>
+      <pubDate>Fri, 01 May 2026 09:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>The full body of the stale post.</p>]]></content:encoded>
+    </item>
+  </channel>
+</rss>

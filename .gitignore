@@ -1,0 +1,31 @@
+# Raw feed/HTML/LLM response blobs — bulky, retained locally + in GH Actions artifacts.
+# The SQLite DB (data/tyler.db) IS committed, per brief §3.
+data/raw/
+
+# Transient run logs (tee'd output from ingest/watchlist runs)
+data/*.log
+
+# Environment
+.env
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/

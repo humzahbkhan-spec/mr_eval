@@ -1,0 +1,91 @@
+# Predicting Tyler — runtime configuration.
+#
+# Versions on this file are read into every prediction row and every run.
+# Bump them when the corresponding artifact changes; see METHODOLOGY.md
+# for the exact bump rules.
+
+corpus_version: "v1.0"         # frozen 2026-07-15: 538 Substack publications (D-23). Bump when the active set changes.
+prompt_version: "v1.0"         # bump when a prompts/*.md file or the few-shot set changes; see DECISIONS.md D-20
+
+# --- Ranker --------------------------------------------------------------
+# One LLM call per model, per run, all through OpenRouter (one key, one client;
+# see DECISIONS.md D-31). `model` is the exact OpenRouter id stored on every
+# prediction row. `pricing` is USD per 1M tokens, used only for cost estimates.
+# EXACT ids + pricing are PROVISIONAL — verify against the Claude API reference /
+# OpenRouter before the first PAID run (single-call smoke test excepted).
+openrouter_base_url: "https://openrouter.ai/api/v1"
+# IDs + pricing verified against OpenRouter / the Claude API reference 2026-07-18
+# (D-32). Pricing is USD per 1M tokens. Confirm the exact GPT-5.6 slug at the
+# first smoke test — a wrong slug 404s immediately and cheaply.
+ranker_models:
+  - model: "anthropic/claude-fable-5"     # Fable 5 — Anthropic's most capable model
+    tier: frontier
+    pricing: {input_per_mtok: 10.0, output_per_mtok: 50.0}
+  - model: "anthropic/claude-opus-4.8"    # Opus 4.8 — current frontier Opus
+    tier: frontier
+    pricing: {input_per_mtok: 5.0, output_per_mtok: 25.0}
+  - model: "openai/gpt-5.6-sol"           # GPT-5.6 Sol — current OpenAI flagship
+    tier: frontier
+    pricing: {input_per_mtok: 5.0, output_per_mtok: 30.0}
+  - model: "moonshotai/kimi-k2.6"         # Kimi K2.6 — open-weights, cheap
+    tier: open_weights
+    pricing: {input_per_mtok: 0.66, output_per_mtok: 3.41}
+
+top_k: 50
+allow_no_confident_picks: true
+
+# --- Matching & scoring --------------------------------------------------
+# Trailing window (days) in which a candidate must have been ranked to count
+# as an opportunity for a given Tyler pick.
+matching_window_days: 4
+
+# When a candidate is ranked on multiple days in the window, this rule picks
+# which rank enters the metric. "best" = lowest rank number across days.
+cross_day_rank_aggregation: best
+
+# --- Ingestion -----------------------------------------------------------
+# Only pull feed entries published within this trailing window.
+ingest_lookback_hours: 48
+
+# Consecutive fetch failures before a feed is marked inactive (does NOT bump
+# corpus_version — see METHODOLOGY.md).
+inactive_after_consecutive_failures: 7
+
+# --- NBER paper track (parallel to the Substack track; see DECISIONS.md D-24)
+# NBER is a self-defining corpus: one authoritative feed, no watchlist to
+# derive. The feed is "the latest ~40 working papers" and carries NO per-item
+# dates, so freshness is dedup-driven (a paper we've already ingested is
+# skipped) rather than time-windowed. `published_at` is therefore recorded as
+# the first-seen date until we backfill true release dates for backtesting.
+nber:
+  feed_url: "https://back.nber.org/rss/new.xml"
+  publication_name: "NBER Working Papers"
+  corpus_version: "nber-v1.0"
+  # Trailing days in which an NBER candidate must have been ranked to count as
+  # an opportunity for a Tyler pick. CALIBRATED (D-27) from 511 real link
+  # events: median lag is 1 day, p90 is 6, p95 is 10; 14d captures 97.1% of
+  # picks and the distribution is flat beyond it until un-catchable classics.
+  matching_window_days: 14
+
+  # A Tyler pick whose paper was released MORE than this many days before the
+  # link is a "classic paper" resurfacing, not a fresh-pick prediction. These
+  # are classified out-of-scope for the NBER recall metric (counted + logged,
+  # not scored as misses). ~2-3% of links. See D-27 / METHODOLOGY.md.
+  classic_paper_after_days: 14
+
+  # Median link-lag is ONE day, so NBER must be polled DAILY — weekly polling
+  # would routinely ingest a paper after Tyler already linked it (D-27).
+
+# --- Ground truth polling -----------------------------------------------
+# Poll MR's RSS every N minutes inside this UTC window; exit early on match.
+gt_poll_start_utc: "15:00"
+gt_poll_end_utc: "22:00"
+gt_poll_interval_minutes: 15
+
+# --- Politeness ---------------------------------------------------------
+# 0.25s between requests = ~4 req/sec. Still well below what a browser page-load
+# generates (dozens of parallel asset fetches per view) against a hosted
+# WordPress site behind a CDN. Scraper backs off on HTTP 429/503 automatically.
+# Dial up if MR ever pushes back. See DECISIONS.md D-15.
+archive_scraper_delay_seconds: 0.25
+user_agent: "PredictingTylerBot/0.1 (research; contact: humzah.b.khan@gmail.com)"
