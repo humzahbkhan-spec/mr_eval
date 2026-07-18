@@ -1,6 +1,6 @@
 # Ranker output instructions — v1.0
 
-You will be given (1) a taste profile describing what a specific expert curator likes, (2) a set of few-shot examples of prior selections by that curator, and (3) today's candidate posts — one line per post in the format `[candidate_id] | publication | author | title | subtitle`. Your task is to rank the candidates.
+You will be given (1) a taste profile describing what a specific expert curator likes, (2) a set of few-shot examples of prior selections by that curator, and (3) today's candidate posts. Each candidate is a block that begins with a header line `### [candidate_id] Title`, then a `Publication: … · Author: …` line, then the post's body text (often truncated, marked with `[…]`). The curator reads the actual content, so judge each candidate on its body, not just its title. Your task is to rank the candidates.
 
 ## Output format
 

@@ -12,6 +12,7 @@ from src.db import connect, init_schema
 from src.rank import (
     Candidate,
     LLMResponse,
+    body_text,
     build_prompt,
     cost_usd,
     estimate_run,
@@ -46,20 +47,35 @@ class FakeClient:
 
 # --- prompt assembly ------------------------------------------------------
 
-def test_format_candidate_contract():
-    c = Candidate(41, "The Zvi", "Zvi", "A title", "A subtitle")
-    assert format_candidate(c) == "[41] | The Zvi | Zvi | A title | A subtitle"
+def test_format_candidate_includes_body():
+    c = Candidate(41, "The Zvi", "Zvi", "A title", "A subtitle", body="the full body text")
+    block = format_candidate(c)
+    assert "### [41] A title" in block
+    assert "Publication: The Zvi · Author: Zvi" in block
+    assert "the full body text" in block          # body preferred over subtitle
+
+
+def test_format_candidate_falls_back_to_subtitle():
+    c = Candidate(41, "The Zvi", "Zvi", "A title", "A subtitle")   # no body
+    assert "A subtitle" in format_candidate(c)
+
+
+def test_body_text_strips_html_and_truncates():
+    html = "<p>One two three</p><p>four five six seven</p>"
+    assert body_text(html, 0) == "One two three four five six seven"   # no truncation
+    assert body_text(html, 3) == "One two three […]"                   # truncated
+    assert body_text(None, 10) == ""
 
 
 def test_build_prompt_puts_candidates_in_user_message(tmp_path):
     (tmp_path / "ranker_instructions_v1.md").write_text("INSTR")
     (tmp_path / "taste_profile_v1.md").write_text("TASTE")
     (tmp_path / "few_shot_substack_v1.md").write_text("FEWSHOT")
-    cands = [Candidate(1, "P", "A", "T", "S")]
+    cands = [Candidate(1, "P", "A", "T", "S", body="BODYTEXT")]
     system, user = build_prompt("substack", cands, prompts_dir=tmp_path)
     # static content in system (cacheable), candidates in user
     assert "INSTR" in system and "TASTE" in system and "FEWSHOT" in system
-    assert "[1] | P | A | T | S" in user
+    assert "### [1] T" in user and "BODYTEXT" in user
     assert "TASTE" not in user
 
 

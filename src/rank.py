@@ -54,6 +54,7 @@ class Candidate:
     author: str
     title: str
     subtitle: str
+    body: str = ""          # (truncated) post body — what the model actually reads (D-33)
 
 
 @dataclass
@@ -126,8 +127,15 @@ def _read(path: Path) -> str:
 
 
 def format_candidate(c: Candidate) -> str:
-    """One line per the ranker's input contract: [id] | pub | author | title | sub."""
-    return f"[{c.id}] | {c.publication} | {c.author or ''} | {c.title or ''} | {c.subtitle or ''}"
+    """A candidate block: an id-tagged header, a metadata line, then the
+    (truncated) body — so the model reads the actual content, not just the title
+    (D-33). Falls back to the subtitle when no body is present."""
+    content = c.body or c.subtitle or ""
+    return (
+        f"### [{c.id}] {c.title or '(untitled)'}\n"
+        f"Publication: {c.publication} · Author: {c.author or 'unknown'}\n"
+        f"{content}"
+    )
 
 
 def build_prompt(track: str, candidates: list[Candidate],
@@ -143,7 +151,7 @@ def build_prompt(track: str, candidates: list[Candidate],
         f"# Taste profile\n\n{taste}\n\n"
         f"# Examples of prior selections\n\n{few_shot}"
     )
-    lines = "\n".join(format_candidate(c) for c in candidates)
+    lines = "\n\n".join(format_candidate(c) for c in candidates)
     user = (
         f"# Today's candidates ({track} track, {len(candidates)} posts)\n\n"
         f"{lines}\n\n"
@@ -245,16 +253,35 @@ def cost_usd(prompt_tokens: int, completion_tokens: int, pricing: dict) -> float
 
 # --- Candidate loading ----------------------------------------------------
 
-def load_candidates(conn, track: str) -> list[Candidate]:
-    """Today's candidate pool for a track: rows joined to their publication name."""
+def body_text(full_text: str | None, max_words: int) -> str:
+    """HTML-strip a stored post body and truncate to `max_words` (D-33). The
+    models read this, so it must be plain prose, not markup."""
+    if not full_text:
+        return ""
+    from bs4 import BeautifulSoup
+    text = BeautifulSoup(full_text, "lxml").get_text(" ", strip=True)
+    words = text.split()
+    if max_words and len(words) > max_words:
+        return " ".join(words[:max_words]) + " […]"
+    return text
+
+
+def load_candidates(conn, track: str, body_words: int = 0) -> list[Candidate]:
+    """Today's candidate pool for a track, joined to publication name. When
+    `body_words > 0`, each candidate carries the first `body_words` words of its
+    body (D-33); otherwise body is empty and the ranker falls back to subtitle."""
     rows = conn.execute(
-        "SELECT c.id, p.name AS publication, c.author, c.title, c.subtitle "
+        "SELECT c.id, p.name AS publication, c.author, c.title, c.subtitle, c.full_text "
         "FROM candidates c JOIN publications p ON p.id = c.publication_id "
         "WHERE c.track = ? ORDER BY c.id",
         (track,),
     ).fetchall()
-    return [Candidate(r["id"], r["publication"] or "", r["author"] or "",
-                      r["title"] or "", r["subtitle"] or "") for r in rows]
+    return [
+        Candidate(r["id"], r["publication"] or "", r["author"] or "",
+                  r["title"] or "", r["subtitle"] or "",
+                  body=body_text(r["full_text"], body_words) if body_words else "")
+        for r in rows
+    ]
 
 
 # --- Orchestration --------------------------------------------------------
@@ -320,7 +347,7 @@ def run_ranking(conn, track: str, client: LLMClient, config: dict,
     """Full ranking run for a track: load candidates → build prompt → call each
     model → store predictions. Returns per-model results (with cost)."""
     now = now or datetime.now(timezone.utc)
-    candidates = load_candidates(conn, track)
+    candidates = load_candidates(conn, track, int(config.get("candidate_body_words", 0)))
     if not candidates:
         print(f"[rank] no candidates for track={track}; nothing to do")
         return []
@@ -348,7 +375,7 @@ def run_ranking(conn, track: str, client: LLMClient, config: dict,
 def estimate_run(conn, track: str, config: dict) -> dict:
     """Free pre-flight: assemble the real prompt, estimate tokens and per-model
     cost WITHOUT calling any model."""
-    candidates = load_candidates(conn, track)
+    candidates = load_candidates(conn, track, int(config.get("candidate_body_words", 0)))
     system, user = build_prompt(track, candidates)
     p_tok = estimate_tokens(system) + estimate_tokens(user)
     # Assume a full 50-pick JSON response (~60 tokens/pick) for the estimate.

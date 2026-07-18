@@ -17,6 +17,7 @@ from src.score import (
     harvest_from_rss,
     match_unscored,
     mrr,
+    prune_full_text,
     nber_paper_id,
     parse_tyler_posts_rss,
     recall_at_k,
@@ -177,6 +178,27 @@ def test_match_unscored_outside_window_stays_unmatched():
     _seed_gt(conn, 1, "https://foo.substack.com/p/x", "substack", "2026-07-10")
     stats = match_unscored(conn, substack_window=4, nber_window=14)
     assert stats.exact == 0 and stats.still_unmatched == 1
+
+
+def test_prune_full_text_drops_only_past_window():
+    conn = _db()
+    conn.execute("INSERT INTO publications (id, name, feed_url, canonical_domain, "
+                 "added_date, source, corpus_version) VALUES "
+                 "(1,'P','u','a.substack.com','2026-01-01','manual','v1')")
+    # substack window = 4 days; "now" = 2026-07-18
+    now = NOW
+    # old candidate (ingested 10 days ago) -> pruned; recent (today) -> kept
+    _seed_candidate(conn, 1, 1, "https://a.substack.com/p/old", "substack",
+                    ingested="2026-07-08", published="2026-07-08")
+    _seed_candidate(conn, 2, 1, "https://a.substack.com/p/new", "substack",
+                    ingested="2026-07-18", published="2026-07-18")
+    conn.execute("UPDATE candidates SET full_text='<p>body</p>' WHERE id IN (1,2)")
+    conn.commit()
+    pruned = prune_full_text(conn, substack_window=4, nber_window=14, now=now)
+    assert pruned == 1
+    bodies = dict(conn.execute("SELECT id, full_text FROM candidates").fetchall())
+    assert bodies[1] is None       # past window -> nulled
+    assert bodies[2] == "<p>body</p>"   # still in window -> kept
 
 
 def test_match_unscored_same_publication():

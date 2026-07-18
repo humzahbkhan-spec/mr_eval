@@ -5,7 +5,7 @@
 # for the exact bump rules.
 
 corpus_version: "v1.0"         # frozen 2026-07-15: 538 Substack publications (D-23). Bump when the active set changes.
-prompt_version: "v1.0"         # bump when a prompts/*.md file or the few-shot set changes; see DECISIONS.md D-20
+prompt_version: "v2.0"         # v2.0 = ranker reads truncated full text, not just title+subtitle (D-33). Bump on any prompt/candidate-representation change.
 
 # --- Ranker --------------------------------------------------------------
 # One LLM call per model, per run, all through OpenRouter (one key, one client;
@@ -18,10 +18,7 @@ openrouter_base_url: "https://openrouter.ai/api/v1"
 # (D-32). Pricing is USD per 1M tokens. Confirm the exact GPT-5.6 slug at the
 # first smoke test — a wrong slug 404s immediately and cheaply.
 ranker_models:
-  - model: "anthropic/claude-fable-5"     # Fable 5 — Anthropic's most capable model
-    tier: frontier
-    pricing: {input_per_mtok: 10.0, output_per_mtok: 50.0}
-  - model: "anthropic/claude-opus-4.8"    # Opus 4.8 — current frontier Opus
+  - model: "anthropic/claude-opus-4.8"    # Opus 4.8 — frontier Claude (Fable dropped D-34: 2× cost, no edge on a single-shot ranking call)
     tier: frontier
     pricing: {input_per_mtok: 5.0, output_per_mtok: 25.0}
   - model: "openai/gpt-5.6-sol"           # GPT-5.6 Sol — current OpenAI flagship
@@ -32,6 +29,13 @@ ranker_models:
     pricing: {input_per_mtok: 0.66, output_per_mtok: 3.41}
 
 top_k: 50
+
+# The ranker sends the first N words of each candidate's body (HTML-stripped),
+# so models read the actual content, not just the headline — faithful to Tyler's
+# read-everything taste (D-33). 0 = title+subtitle only (the v1.0 baseline).
+# Keep the whole prompt under the smallest model's context (Kimi K2.6 = 262k):
+# ~180 posts x 900 words ~= 226k tokens. Lower this if a day's pool is larger.
+candidate_body_words: 900
 allow_no_confident_picks: true
 
 # --- Matching & scoring --------------------------------------------------

@@ -318,6 +318,37 @@ def match_unscored(conn, substack_window: int | None = None,
     return stats
 
 
+# --- Maintenance ----------------------------------------------------------
+
+def prune_full_text(conn, substack_window: int | None = None,
+                    nber_window: int | None = None, now=None) -> int:
+    """Null `candidates.full_text` once a candidate is past its matching window
+    (D-35). The body's only consumer is the ranker; after the window no Tyler
+    pick can still match the candidate, so the body is dead weight — and it stays
+    re-derivable from the archived raw feed and the link. Returns rows pruned.
+
+    Called by the daily job after scoring; keeps the committed DB from growing
+    unbounded with article bodies (which dominate its size).
+    """
+    now = now or datetime.now(timezone.utc)
+    windows = {
+        "substack": substack_window if substack_window is not None else _substack_window(conn),
+        "nber": nber_window if nber_window is not None else _nber_window(conn),
+    }
+    today = now.date()
+    pruned = 0
+    for track, window in windows.items():
+        cutoff = (today - timedelta(days=window)).isoformat()
+        cur = conn.execute(
+            "UPDATE candidates SET full_text = NULL "
+            "WHERE track = ? AND full_text IS NOT NULL AND substr(ingested_at, 1, 10) < ?",
+            (track, cutoff),
+        )
+        pruned += cur.rowcount
+    conn.commit()
+    return pruned
+
+
 # --- Metrics --------------------------------------------------------------
 
 def _opportunities(conn, track: str, kind: str):
