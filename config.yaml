@@ -44,6 +44,11 @@ allow_no_confident_picks: true
 # 26h ≈ "new since yesterday's run" with margin. 0 = rank all (manual/backfill).
 rank_pool_hours: 26
 
+# Hard cap on assembled-prompt size — the ranker trims the OLDEST candidates
+# until the prompt fits, so it never exceeds the smallest model's context window
+# (Kimi K2.6 = 262k). Kept ~14k under that as a margin for tokenizer variance. D-40.
+max_prompt_tokens: 248000
+
 # --- Matching & scoring --------------------------------------------------
 # Trailing window (days) in which a Substack candidate must have been ranked to
 # count as an opportunity for a given Tyler pick. Set generously (7) rather than

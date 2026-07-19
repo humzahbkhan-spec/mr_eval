@@ -130,6 +130,11 @@ def candidate_best_ranks(candidate_id: int):
     ).fetchall()
 
 
+def latest_data_date():
+    return _conn().execute(
+        "SELECT MAX(run_date) FROM runs WHERE kind = 'live'").fetchone()[0]
+
+
 def corpus_domains() -> set[str]:
     return {r[0] for r in _conn().execute("SELECT canonical_domain FROM publications")}
 
@@ -212,7 +217,8 @@ st.markdown(f"""
 # --- header ---------------------------------------------------------------
 
 st.markdown(
-    '<div class="masthead"><div class="kicker">A live eval of machine taste</div>'
+    '<div class="masthead"><div class="kicker">A live eval of machine taste'
+    f'&nbsp;&nbsp;·&nbsp;&nbsp;Data as of {pretty_date(latest_data_date())}</div>'
     '<h1>Predicting Tyler</h1></div>'
     '<div class="dek">Each day, three models read the same fresh posts and rank what '
     'Tyler Cowen is most likely to link on Marginal Revolution. When he posts, we score '
@@ -262,7 +268,7 @@ actual = tyler_links_since(track, launch)
 if not actual:
     st.markdown(
         f'<div class="note">Tracking began {pretty_date(launch)}. As Tyler links a '
-        f'{track_label} item from here on, it appears here — marked in- or out-of-corpus, '
+        f'{track_label} item from here on, it appears here, marked in or out of corpus '
         'and scored against the models above.</div>', unsafe_allow_html=True)
 else:
     domains = corpus_domains()

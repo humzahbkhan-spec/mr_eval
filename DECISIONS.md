@@ -4,6 +4,11 @@ Every non-trivial editorial or design decision is dated and rationalized here. N
 
 ---
 
+## 2026-07-19
+
+### D-40: Hard context-fit guard on the ranker prompt (Kimi overflowed on the first live cron run)
+The first launchd run (2026-07-19 09:05 ET) ranked Substack with **296 candidates ≈ 273k tokens**, over Kimi K2.6's 262k window — Kimi returned a 400 and was skipped (Opus + GPT succeeded; NBER fine). Root cause: `rank_pool_hours=26` straddled yesterday's evening manual ingests and today's 9am ingest, ~doubling the pool; and even a single busy day can approach the ceiling with full bodies (D-33). Fix: `fit_to_budget()` keeps the **newest** candidates whose blocks fit under `max_prompt_tokens` (248000, ~14k under Kimi's limit for tokenizer-estimate variance) and drops the oldest, logging the count — the oldest had earlier chances to be ranked, and the freshest (likeliest to be linked) are always kept. Verified: today's 296 → 280 kept (~247k tokens, fits). Applies automatically from the next run; today's Substack stands with Opus+GPT only (Kimi gap). This run also confirmed the whole cron works end-to-end: ingest (residential IP, clean) → rank → harvest → match → prune → DB published to the Release (13:09 UTC) → nudge commit. Dashboard gained a "Data as of {date}" dateline (latest live run_date).
+
 ## 2026-07-18
 
 ### D-39: Substack blocks datacenter IPs → the daily pipeline runs on the Mac (launchd), not GitHub Actions

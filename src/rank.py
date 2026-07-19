@@ -352,6 +352,27 @@ def store_run(conn, run_id: str, track: str, kind: str, models: list[str],
                 )
 
 
+def fit_to_budget(candidates: list[Candidate], track: str,
+                  max_tokens: int) -> tuple[list[Candidate], int]:
+    """Keep the newest candidates whose blocks fit under `max_tokens` alongside
+    the static prompt, so the assembled prompt never exceeds the smallest model's
+    context window (Kimi K2.6 = 262k). Drops the oldest (which had earlier
+    chances to be ranked). Returns (kept, n_dropped). See D-40."""
+    if not max_tokens:
+        return candidates, 0
+    system, _ = build_prompt(track, [])
+    budget = max_tokens - estimate_tokens(system) - 300      # margin for the user wrapper
+    kept, used = [], 0
+    for c in sorted(candidates, key=lambda c: c.id, reverse=True):   # newest first
+        t = estimate_tokens(format_candidate(c)) + 2
+        if used + t > budget:
+            break
+        used += t
+        kept.append(c)
+    kept.sort(key=lambda c: c.id)
+    return kept, len(candidates) - len(kept)
+
+
 def run_ranking(conn, track: str, client: LLMClient, config: dict,
                 kind: str = "live", now: Optional[datetime] = None) -> list[ModelResult]:
     """Full ranking run for a track: load candidates → build prompt → call each
@@ -362,6 +383,9 @@ def run_ranking(conn, track: str, client: LLMClient, config: dict,
     if not candidates:
         print(f"[rank] no candidates for track={track}; nothing to do")
         return []
+    candidates, dropped = fit_to_budget(candidates, track, int(config.get("max_prompt_tokens", 0)))
+    if dropped:
+        print(f"[rank] trimmed {dropped} oldest candidates to fit the context window")
     valid_ids = {c.id for c in candidates}
     system, user = build_prompt(track, candidates)
     models = config["ranker_models"]
@@ -388,6 +412,7 @@ def estimate_run(conn, track: str, config: dict) -> dict:
     cost WITHOUT calling any model."""
     candidates = load_candidates(conn, track, int(config.get("candidate_body_words", 0)),
                                  int(config.get("rank_pool_hours", 0)))
+    candidates, _ = fit_to_budget(candidates, track, int(config.get("max_prompt_tokens", 0)))
     system, user = build_prompt(track, candidates)
     p_tok = estimate_tokens(system) + estimate_tokens(user)
     # Assume a full 50-pick JSON response (~60 tokens/pick) for the estimate.
