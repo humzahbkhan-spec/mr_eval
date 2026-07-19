@@ -6,6 +6,10 @@ Every non-trivial editorial or design decision is dated and rationalized here. N
 
 ## 2026-07-19
 
+### D-41: Dashboard was serving a stale DB — refresh when the Release is newer, not just when missing
+The deployed dashboard showed "Data as of July 18" (yesterday) even after today's run published a new DB Release: `ensure_db()` only downloaded the asset when `data/tyler.db` was *absent*, so once Streamlit's container had a copy it never refreshed. Fix: compare the Release asset's `updated_at` to the local file's mtime and re-download when the Release is newer (or missing). Local dev is protected by a 120s margin — the Release is uploaded seconds after the local run, so it's never counted as "newer" than the local file. `ensure_db` still runs once per app start (cache_resource); the daily nudge-commit forces a redeploy so it re-runs and picks up the day's DB.
+
+
 ### D-40: Hard context-fit guard on the ranker prompt (Kimi overflowed on the first live cron run)
 The first launchd run (2026-07-19 09:05 ET) ranked Substack with **296 candidates ≈ 273k tokens**, over Kimi K2.6's 262k window — Kimi returned a 400 and was skipped (Opus + GPT succeeded; NBER fine). Root cause: `rank_pool_hours=26` straddled yesterday's evening manual ingests and today's 9am ingest, ~doubling the pool; and even a single busy day can approach the ceiling with full bodies (D-33). Fix: `fit_to_budget()` keeps the **newest** candidates whose blocks fit under `max_prompt_tokens` (248000, ~14k under Kimi's limit for tokenizer-estimate variance) and drops the oldest, logging the count — the oldest had earlier chances to be ranked, and the freshest (likeliest to be linked) are always kept. Verified: today's 296 → 280 kept (~247k tokens, fits). Applies automatically from the next run; today's Substack stands with Opus+GPT only (Kimi gap). This run also confirmed the whole cron works end-to-end: ingest (residential IP, clean) → rank → harvest → match → prune → DB published to the Release (13:09 UTC) → nudge commit. Dashboard gained a "Data as of {date}" dateline (latest live run_date).
 

@@ -43,15 +43,18 @@ def _secret(key: str, default: str = "") -> str:
 
 @st.cache_resource
 def ensure_db():
-    """Fetch tyler.db from the GitHub Release asset when there's no local copy.
+    """Make sure `data/tyler.db` is the latest published copy.
 
-    Locally the DB is present (dev) and this is a no-op. On Streamlit Cloud the
-    DB is gitignored, so we download the rolling `data-latest` release asset that
-    the daily job publishes. A private repo needs GH_TOKEN as a Streamlit secret;
-    a public repo works without one.
+    The daily job republishes the DB as the `data-latest` Release asset each run.
+    We download it when it's MISSING or when the Release is newer than the local
+    file (older code only downloaded-if-missing, which left Streamlit serving a
+    stale copy forever — D-41). Runs once per app start (cache_resource); the
+    daily nudge-commit forces a redeploy so this re-runs and refreshes.
+
+    Local dev keeps its own DB: the Release is uploaded right after the local run,
+    so it's never >120s newer than the local file, and we skip the download.
     """
-    if DB.exists():
-        return
+    from datetime import datetime
     import httpx
     repo = _secret("GH_REPO", "humzahbkhan-spec/mr_eval")
     tag = _secret("DB_RELEASE_TAG", "data-latest")
@@ -59,13 +62,21 @@ def ensure_db():
     headers = {"Accept": "application/vnd.github+json"}
     if token:
         headers["Authorization"] = f"Bearer {token}"
-    with st.spinner("Loading the latest data…"):
+    try:
         rel = httpx.get(f"https://api.github.com/repos/{repo}/releases/tags/{tag}",
                         headers=headers, timeout=30.0).json()
         asset = next((a for a in rel.get("assets", []) if a["name"] == "tyler.db"), None)
-        if not asset:
-            st.error("No data release found yet — the daily job hasn't published one.")
-            st.stop()
+    except Exception:
+        asset = None
+    if asset is None:                       # can't reach the Release
+        if DB.exists():
+            return                          # fall back to whatever we have
+        st.error("No data release reachable yet.")
+        st.stop()
+    rel_ts = datetime.fromisoformat(asset["updated_at"].replace("Z", "+00:00")).timestamp()
+    if DB.exists() and DB.stat().st_mtime + 120 >= rel_ts:
+        return                              # local copy is current (or newer)
+    with st.spinner("Loading the latest data…"):
         blob = httpx.get(asset["url"], follow_redirects=True, timeout=180.0,
                          headers={**headers, "Accept": "application/octet-stream"})
         DB.parent.mkdir(parents=True, exist_ok=True)
