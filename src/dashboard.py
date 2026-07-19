@@ -220,9 +220,13 @@ st.markdown(
     '<div class="masthead"><div class="kicker">A live eval of machine taste'
     f'&nbsp;&nbsp;·&nbsp;&nbsp;Data as of {pretty_date(latest_data_date())}</div>'
     '<h1>Predicting Tyler</h1></div>'
-    '<div class="dek">Each day, three models read the same fresh posts and rank what '
-    'Tyler Cowen is most likely to link on Marginal Revolution. When he posts, we score '
-    'them against his real picks.</div>'
+    '<div class="dek">Predicting Tyler is a daily test of whether a language model can '
+    'anticipate what Tyler Cowen links on Marginal Revolution. Tyler has previously '
+    'discussed <a href="https://marginalrevolution.com/marginalrevolution/2025/01/'
+    'should-you-be-writing-for-the-ais.html" target="_blank" rel="noopener">"writing for '
+    'the AIs"</a>. This turns that around: can the AIs model <i>him</i>? Each morning '
+    "several models see the same fresh material and guess what he'll pick. Then we grade "
+    'them against his real choices.</div>'
     '<div class="more"><a href="#about">How this works</a></div>',
     unsafe_allow_html=True)
 
@@ -334,13 +338,6 @@ with c4:
 st.markdown("""
 <div class="about" id="about">
 <h2>How this works</h2>
-<p><b>Predicting Tyler</b> is a daily test of whether a language model can anticipate
-what Tyler Cowen links on Marginal Revolution. Tyler has previously discussed
-<a href="https://marginalrevolution.com/marginalrevolution/2025/01/should-you-be-writing-for-the-ais.html" target="_blank" rel="noopener">"writing for the AIs"</a>.
-This turns that around: can the AIs model <i>him</i>? Each morning several models see
-the same fresh material and guess what he'll pick; we grade them against his real
-choices.</p>
-
 <p><b>Why only Substacks and NBER working papers?</b> Grading a prediction fairly means
 knowing the full set of things a model <i>could</i> have picked that day — and that set
 has to be one we can actually see. Substack feeds and NBER's working-paper listings are
