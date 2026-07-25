@@ -196,6 +196,21 @@ def pretty_date(iso) -> str:
         return str(iso or "")
 
 
+def span_label(dates) -> str:
+    """A compact label for the range of dates covered, e.g. 'July 20–23, 2026'."""
+    ds = sorted({str(d)[:10] for d in dates if d})
+    if not ds:
+        return ""
+    a, b = date.fromisoformat(ds[0]), date.fromisoformat(ds[-1])
+    if a == b:
+        return a.strftime("%B %-d, %Y")
+    if (a.year, a.month) == (b.year, b.month):
+        return f"{a.strftime('%B %-d')}–{b.strftime('%-d, %Y')}"
+    if a.year == b.year:
+        return f"{a.strftime('%B %-d')} – {b.strftime('%B %-d, %Y')}"
+    return f"{a.strftime('%B %-d, %Y')} – {b.strftime('%B %-d, %Y')}"
+
+
 # --- page -----------------------------------------------------------------
 
 st.set_page_config(page_title="Predicting Tyler", page_icon="📖", layout="wide",
@@ -212,10 +227,12 @@ label, model = EDITORS[sel]
 
 def build_post() -> str:
     if model == "__tyler__":
-        head = ('<h1 class="ptitle">Assorted links</h1>'
-                '<p class="byline"><i>by</i> <a class="who">Tyler Cowen</a></p>'
-                '<hr class="short">')
         rows = tyler_roundup()
+        span = span_label([r["mr_post_date"] for r in rows])
+        head = ('<h1 class="ptitle">Assorted links</h1>'
+                '<p class="byline"><i>by</i> <a class="who">Tyler Cowen</a>'
+                + (f' <i>{span}</i>' if span else '') + '</p>'
+                '<hr class="short">')
         if not rows:
             return head + ('<p class="empty">No Substack or NBER links from Tyler in the last '
                            'few days. His news and X links are recorded but not scored.</p>')
@@ -246,7 +263,9 @@ def build_post() -> str:
             gloss = f'{src} · {note}'
             items += (f'<li><a href="{r["raw_url"]}" target="_blank" rel="noopener">{title}</a>.'
                       f'<div class="gloss">{gloss} · linked {r["mr_post_date"]}</div></li>')
-        return head + f'<ol class="links">{items}</ol>'
+        tail = ('<p class="method">A rolling list of Tyler’s recent assorted links, '
+                'newest first.</p>')
+        return head + f'<ol class="links">{items}</ol>' + tail
 
     head = (f'<h1 class="ptitle">Assorted links</h1>'
             f'<p class="byline"><i>by</i> <a class="who">{esc(label)}</a> '
