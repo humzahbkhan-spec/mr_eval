@@ -1,32 +1,41 @@
-"""Predicting Tyler — read-only dashboard over tyler.db.
+"""Predicting Tyler — styled as a close homage to Marginal Revolution's layout.
 
-Editorial aesthetic (warm paper, oxblood accent, serif masthead), built from
-Streamlit theming + streamlit-shadcn-ui components + a little CSS to strip the
-default chrome — deliberately not default-Streamlit. Read-only against the DB.
+Mirrors MR's chrome (mint-green masthead, black nav bar, left sidebar with a
+vertical rule, serif blue-link post body) but is clearly OUR project: the black
+nav bar is the editor toggle, and the sidebar/footer — where MR runs promos and
+comments — explains the experiment. The toggle swaps whose "assorted links" you
+read: Claude Opus, ChatGPT, Kimi, or Tyler's actual picks. Read-only over
+data/tyler.db.
 
-Run:  streamlit run src/dashboard.py
+    streamlit run src/dashboard.py
 """
 
 from __future__ import annotations
 
 import sqlite3
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 from urllib.parse import urlsplit
 
 import streamlit as st
-import streamlit_shadcn_ui as ui
 
 DB = Path("data/tyler.db")
-ACCENT = "#8C3A2B"
-INK = "#211C17"
-MUTED = "#6B6255"
-RULE = "#DED6C6"
 
-TRACKS = {"Substack": "substack", "NBER papers": "nber"}
-MODEL_NAMES = {"anthropic/claude-opus-4.8": "Claude Opus 4.8",
-               "openai/gpt-5.6-sol": "GPT-5.6 Sol",
-               "moonshotai/kimi-k2.6": "Kimi K2.6"}
+# --- MR palette (sampled from the real MR page; tune the vars) ------------
+GREEN = "#56bd9b"       # masthead band (sampled + region-averaged from the real MR page)
+NAVBG = "#000000"       # nav bar
+INK = "#1b1b1b"         # body text
+LINK = "#1a3ecc"        # post links + byline name (MR's vivid royal blue, sampled)
+RULE = "#dcdcdc"
+MUTED = "#6b6b6b"
+PAPER = "#ffffff"
+
+EDITORS = {  # url key -> (menu label, model id or __tyler__)
+    "opus":  ("Claude Opus 4.8",   "anthropic/claude-opus-4.8"),
+    "gpt":   ("ChatGPT",           "openai/gpt-5.6-sol"),
+    "kimi":  ("Kimi K2.6",         "moonshotai/kimi-k2.6"),
+    "tyler": ("Tyler’s picks",     "__tyler__"),
+}
 
 
 # --- data -----------------------------------------------------------------
@@ -43,17 +52,7 @@ def _secret(key: str, default: str = "") -> str:
 
 @st.cache_resource
 def ensure_db():
-    """Make sure `data/tyler.db` is the latest published copy.
-
-    The daily job republishes the DB as the `data-latest` Release asset each run.
-    We download it when it's MISSING or when the Release is newer than the local
-    file (older code only downloaded-if-missing, which left Streamlit serving a
-    stale copy forever — D-41). Runs once per app start (cache_resource); the
-    daily nudge-commit forces a redeploy so this re-runs and refreshes.
-
-    Local dev keeps its own DB: the Release is uploaded right after the local run,
-    so it's never >120s newer than the local file, and we skip the download.
-    """
+    """Download tyler.db from the GitHub Release when missing or stale (D-41)."""
     from datetime import datetime
     import httpx
     repo = _secret("GH_REPO", "humzahbkhan-spec/mr_eval")
@@ -68,14 +67,14 @@ def ensure_db():
         asset = next((a for a in rel.get("assets", []) if a["name"] == "tyler.db"), None)
     except Exception:
         asset = None
-    if asset is None:                       # can't reach the Release
+    if asset is None:
         if DB.exists():
-            return                          # fall back to whatever we have
+            return
         st.error("No data release reachable yet.")
         st.stop()
     rel_ts = datetime.fromisoformat(asset["updated_at"].replace("Z", "+00:00")).timestamp()
     if DB.exists() and DB.stat().st_mtime + 120 >= rel_ts:
-        return                              # local copy is current (or newer)
+        return
     with st.spinner("Loading the latest data…"):
         blob = httpx.get(asset["url"], follow_redirects=True, timeout=180.0,
                          headers={**headers, "Accept": "application/octet-stream"})
@@ -90,292 +89,314 @@ def _conn():
     return c
 
 
-def latest_run(track: str, prompt_version: str | None = None):
-    q = "SELECT * FROM runs WHERE track = ? AND kind = 'live'"
-    args = [track]
-    if prompt_version:
-        q += " AND prompt_version = ?"
-        args.append(prompt_version)
-    q += " ORDER BY started_at DESC LIMIT 1"
-    return _conn().execute(q, args).fetchone()
-
-
-def picks(run_id: str, model: str, limit: int = 6):
-    return _conn().execute(
-        "SELECT p.rank, p.score, p.rationale, c.title, pub.name AS publication "
-        "FROM predictions p JOIN candidates c ON c.id = p.candidate_id "
-        "JOIN publications pub ON pub.id = c.publication_id "
-        "WHERE p.run_id = ? AND p.model = ? ORDER BY p.rank LIMIT ?",
-        (run_id, model, limit),
-    ).fetchall()
-
-
-def models_in(run_id: str):
-    return [r[0] for r in _conn().execute(
-        "SELECT DISTINCT model FROM predictions WHERE run_id = ? ORDER BY model", (run_id,))]
-
-
-def launch_date(track: str):
-    """Day 1 for this track = when we first ingested candidates for it."""
-    return _conn().execute(
-        "SELECT MIN(substr(ingested_at, 1, 10)) FROM candidates WHERE track = ?",
-        (track,)).fetchone()[0]
-
-
-def tyler_links_since(track: str, since: str):
-    """Tyler's actual in-track links on/after `since`, with match status."""
-    if not since:
-        return []
-    return _conn().execute(
-        "SELECT mr_post_date, canonical_url, match_type, matched_candidate_id "
-        "FROM ground_truth WHERE track = ? AND mr_post_date >= ? "
-        "AND match_type != 'out_of_scope' ORDER BY mr_post_date DESC",
-        (track, since),
-    ).fetchall()
-
-
-def candidate_best_ranks(candidate_id: int):
-    return _conn().execute(
-        "SELECT model, MIN(rank) AS r FROM predictions WHERE candidate_id = ? GROUP BY model",
-        (candidate_id,),
-    ).fetchall()
+def latest_run_ids():
+    ids = []
+    for track in ("substack", "nber"):
+        r = _conn().execute(
+            "SELECT run_id FROM runs WHERE track=? AND kind='live' AND prompt_version='v2.0' "
+            "ORDER BY started_at DESC LIMIT 1", (track,)).fetchone()
+        if r:
+            ids.append(r["run_id"])
+    return ids
 
 
 def latest_data_date():
+    return _conn().execute("SELECT MAX(run_date) FROM runs WHERE kind='live'").fetchone()[0]
+
+
+def editor_roundup(model: str, limit: int = 12):
+    ids = latest_run_ids()
+    if not ids:
+        return []
+    ph = ",".join("?" * len(ids))
     return _conn().execute(
-        "SELECT MAX(run_date) FROM runs WHERE kind = 'live'").fetchone()[0]
+        f"SELECT p.score, p.rank, p.rationale, p.track, c.title, c.url, pub.name AS pub "
+        f"FROM predictions p JOIN candidates c ON c.id=p.candidate_id "
+        f"JOIN publications pub ON pub.id=c.publication_id "
+        f"WHERE p.model=? AND p.run_id IN ({ph}) "
+        f"ORDER BY p.score DESC, p.rank LIMIT ?",
+        [model, *ids, limit]).fetchall()
 
 
-def corpus_domains() -> set[str]:
-    return {r[0] for r in _conn().execute("SELECT canonical_domain FROM publications")}
+def tyler_roundup(days: int = 6):
+    since = (date.today() - timedelta(days=days)).isoformat()
+    return _conn().execute(
+        "SELECT g.mr_post_date, g.canonical_url, g.raw_url, g.track, g.match_type, "
+        "       g.matched_candidate_id, cand.title AS ctitle, pub.name AS cpub "
+        "FROM ground_truth g "
+        "LEFT JOIN candidates cand ON cand.id=g.matched_candidate_id "
+        "LEFT JOIN publications pub ON pub.id=cand.publication_id "
+        "WHERE g.mr_post_date>=? AND g.track IN ('substack','nber') "
+        "ORDER BY g.mr_post_date DESC, g.link_position", (since,)).fetchall()
 
 
-def corpus_health(track: str):
-    c = _conn()
-    pubs = c.execute("SELECT COUNT(*) FROM publications WHERE track='substack' AND active=1").fetchone()[0]
-    cands = c.execute("SELECT COUNT(*) FROM candidates WHERE track=?", (track,)).fetchone()[0]
-    hits = c.execute("SELECT COUNT(*) FROM ground_truth WHERE track=? AND match_type IN ('exact','content_match')",
-                     (track,)).fetchone()[0]
-    return {"publications": pubs, "candidates": cands, "hits": hits}
+def model_ranks(candidate_id: int):
+    return _conn().execute(
+        "SELECT model, MIN(rank) AS r FROM predictions WHERE candidate_id=? GROUP BY model",
+        (candidate_id,)).fetchall()
+
+
+def corpus_count():
+    return _conn().execute(
+        "SELECT COUNT(*) FROM publications WHERE track='substack' AND active=1").fetchone()[0]
+
+
+def scored_hits(limit: int = 5):
+    return _conn().execute(
+        "SELECT g.matched_candidate_id cid, cand.title, pub.name pub "
+        "FROM ground_truth g JOIN candidates cand ON cand.id=g.matched_candidate_id "
+        "JOIN publications pub ON pub.id=cand.publication_id "
+        "WHERE g.match_type='exact' AND g.mr_post_date>='2026-07-18' "
+        "ORDER BY g.mr_post_date DESC LIMIT ?", (limit,)).fetchall()
+
+
+def corpus_substack_domains() -> set:
+    """Canonical domains of the active Substack watchlist — the publications we cover."""
+    return {row[0] for row in _conn().execute(
+        "SELECT canonical_domain FROM publications WHERE track='substack' AND active=1")}
+
+
+def candidate_ingest_day(canonical_url: str, track: str):
+    """First date (YYYY-MM-DD) we ingested a candidate at this exact URL, or None.
+
+    Lets the Tyler view tell a *timing* miss (we did eventually ingest the post,
+    just too late) apart from a genuine corpus gap (we never had it at all).
+    """
+    row = _conn().execute(
+        "SELECT MIN(substr(ingested_at, 1, 10)) FROM candidates "
+        "WHERE canonical_url = ? AND track = ?", (canonical_url, track)).fetchone()
+    return row[0] if row and row[0] else None
 
 
 def short(model: str) -> str:
-    return MODEL_NAMES.get(model, model.split("/")[-1])
+    return {"anthropic/claude-opus-4.8": "Opus", "openai/gpt-5.6-sol": "GPT",
+            "moonshotai/kimi-k2.6": "Kimi"}.get(model, model.split("/")[-1])
 
 
-def url_label(u: str) -> tuple[str, str]:
-    p = urlsplit(u)
+def esc(s) -> str:
+    return (s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def clip(s, n) -> str:
+    s = s or ""
+    return s if len(s) <= n else s[: n - 1].rstrip() + "…"
+
+
+def url_slug(u: str):
+    p = urlsplit(u or "")
     host = (p.hostname or "").replace("www.", "")
     slug = (p.path.strip("/").split("/")[-1] or "").replace("-", " ")
     return host, slug
 
 
-def pretty_date(iso: str | None) -> str:
+def pretty_date(iso) -> str:
     try:
-        return date.fromisoformat(iso).strftime("%B %-d, %Y")
+        return date.fromisoformat(str(iso)[:10]).strftime("%A, %B %-d, %Y")
     except (TypeError, ValueError):
-        return iso or "—"
+        return str(iso or "")
 
 
-# --- chrome + styling -----------------------------------------------------
+# --- page -----------------------------------------------------------------
 
-st.set_page_config(page_title="Predicting Tyler", page_icon="📖",
-                   layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Predicting Tyler", page_icon="📖", layout="wide",
+                   initial_sidebar_state="collapsed")
+ensure_db()
 
-ensure_db()   # no-op locally; downloads the release asset on Streamlit Cloud
+sel = st.query_params.get("editor", "opus")
+if sel not in EDITORS:
+    sel = "opus"
+label, model = EDITORS[sel]
 
-st.markdown(f"""
+
+# ---- build the post body -------------------------------------------------
+
+def build_post() -> str:
+    if model == "__tyler__":
+        head = ('<h1 class="ptitle">Assorted links</h1>'
+                '<p class="byline"><i>by</i> <a class="who">Tyler Cowen</a></p>'
+                '<hr class="short">')
+        rows = tyler_roundup()
+        if not rows:
+            return head + ('<p class="empty">No Substack or NBER links from Tyler in the last '
+                           'few days. His news and X links are recorded but not scored.</p>')
+        domains = corpus_substack_domains()
+        items = ""
+        for r in rows:
+            host, slug = url_slug(r["canonical_url"])
+            title = esc(r["ctitle"]) if r["ctitle"] else esc(slug or host)
+            src = esc(r["cpub"]) if r["cpub"] else esc(host)
+            if r["match_type"] in ("exact", "content_match") and r["matched_candidate_id"]:
+                rk = " · ".join(f"{short(x['model'])} #{x['r']}"
+                                for x in sorted(model_ranks(r["matched_candidate_id"]),
+                                                key=lambda x: x["r"]))
+                note = f'<span class="hit">the models ranked it: {rk}</span>'
+            else:
+                # An unmatched link: distinguish a timing miss (we did ingest the
+                # exact post, just after Tyler had already linked it — so it was
+                # never a fair opportunity) from a real corpus gap.
+                cday = candidate_ingest_day(r["canonical_url"], r["track"])
+                if cday and cday > r["mr_post_date"][:10]:
+                    note = ('<span class="late">in the corpus, but published after '
+                            'our last scan</span>')
+                elif r["track"] == "nber" or host in domains or cday:
+                    note = ('<span class="incorp">in the corpus, but not in that '
+                            'day’s candidate pool</span>')
+                else:
+                    note = '<span class="miss">outside the corpus</span>'
+            gloss = f'{src} · {note}'
+            items += (f'<li><a href="{r["raw_url"]}" target="_blank" rel="noopener">{title}</a>.'
+                      f'<div class="gloss">{gloss} · linked {r["mr_post_date"]}</div></li>')
+        return head + f'<ol class="links">{items}</ol>'
+
+    head = (f'<h1 class="ptitle">Assorted links</h1>'
+            f'<p class="byline"><i>by</i> <a class="who">{esc(label)}</a> '
+            f'<i>{pretty_date(latest_data_date())}</i></p><hr class="short">')
+    rows = editor_roundup(model)
+    if not rows:
+        return head + '<p class="empty">No ranking run available yet.</p>'
+    items = ""
+    for r in rows:
+        src = "NBER Working Papers" if r["track"] == "nber" else esc(r["pub"])
+        items += (f'<li><a href="{r["url"]}" target="_blank" rel="noopener">{esc(r["title"])}</a>.'
+                  f'<div class="gloss">{src} — {esc(clip(r["rationale"], 150))}</div></li>')
+    tail = (f'<p class="method">{esc(label)}’s guesses at what Tyler would link, ranked by '
+            f'confidence. See <b>Tyler’s picks</b> above for what he actually chose.</p>')
+    return head + f'<ol class="links">{items}</ol>' + tail
+
+
+# ---- build the sidebar ---------------------------------------------------
+
+def build_sidebar() -> str:
+    res = ""
+    for h in scored_hits():
+        rk = " · ".join(f"{short(x['model'])} #{x['r']}"
+                        for x in sorted(model_ranks(h["cid"]), key=lambda x: x["r"]))
+        res += (f'<div class="res">{esc(clip(h["title"], 42))}'
+                f'<span class="rk">{rk}</span></div>')
+    if not res:
+        res = '<p>No scored picks yet — they appear here as Tyler links things the models ranked.</p>'
+    return f"""
+      <div class="mark"><span class="m1">PREDICTING</span> <span class="m2">TYLER</span></div>
+      <p class="sub">A live eval of machine taste.</p>
+
+      <div class="wtitle">The experiment</div>
+      <p class="wtext">Predicting Tyler is a daily test of whether a language model can anticipate
+        what Tyler Cowen links on Marginal Revolution. Tyler has previously discussed
+        <a href="https://marginalrevolution.com/marginalrevolution/2025/01/should-you-be-writing-for-the-ais.html"
+           target="_blank" rel="noopener">“writing for the AIs”</a>. This turns that around: can
+        the AIs model <i>him</i>? Each morning several models see the same fresh material and guess
+        what he’ll pick. Then we grade them against his real choices.</p>
+
+      <div class="wtitle">Latest results</div>
+      {res}
+
+      <div class="wtitle">Why Substack &amp; NBER?</div>
+      <p class="wtext">Grading a prediction fairly means knowing the full set of things a model
+        <i>could</i> have picked that day. Substack feeds and NBER’s working-paper listings are open
+        and scrapable: no paywalls, no paid APIs, no login. Most of Tyler’s other links — newspapers,
+        journals, X — sit behind paywalls or have no clean, enumerable candidate pool, so we record
+        them but don’t score them.</p>
+
+      <div class="wtitle">The corpus</div>
+      <p class="wtext">A frozen watchlist of every Substack publication Tyler has linked since 2022
+        ({corpus_count()} in all), plus NBER’s working-paper feed. To capture what his taste actually
+        is, we had Claude Fable read a broad, two-decade sample of his past roundups and write a
+        profile of his sensibilities, which each ranking model receives alongside the day’s
+        candidates. The models read the first ~900 words of each post. Reading everything would
+        overflow the smallest model’s context window and cost more.</p>
+    """
+
+
+# ---- nav (the editor toggle) ---------------------------------------------
+
+nav = ""
+for key, (lbl, _m) in EDITORS.items():
+    cls = "navitem active" if key == sel else "navitem"
+    nav += f'<a class="{cls}" href="?editor={key}" target="_self">{esc(lbl)}</a>'
+
+
+# ---- one HTML render -----------------------------------------------------
+
+st.html(f"""
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=PT+Sans:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
   #MainMenu, footer, [data-testid="stToolbar"], [data-testid="stDecoration"],
-  [data-testid="stStatusWidget"] {{ display: none !important; }}
-  .block-container {{ max-width: 1180px; padding-top: 4rem; }}
-  a {{ color: {ACCENT}; }}
-  .masthead {{ border-bottom: 2px solid {INK}; padding-bottom: .7rem; margin-bottom: .3rem; }}
-  .masthead h1 {{ font-family: Georgia, 'Times New Roman', serif; font-weight: 700;
-    font-size: 3.1rem; letter-spacing: -.02em; margin: .1rem 0 0; color: {INK}; }}
-  .kicker {{ font-family: ui-monospace, 'SF Mono', Menlo, monospace; text-transform: uppercase;
-    letter-spacing: .22em; font-size: .68rem; color: {ACCENT}; }}
-  .dek {{ color: {MUTED}; font-size: 1.02rem; margin-top: .5rem; max-width: 62ch; }}
-  .more {{ margin-top: .55rem; margin-bottom: 1.6rem; font-size: .82rem; }}
-  .more a {{ font-family: ui-monospace, monospace; letter-spacing: .04em; }}
-  .section-rule {{ font-family: ui-monospace, monospace; text-transform: uppercase;
-    letter-spacing: .18em; font-size: .72rem; color: {MUTED}; border-top: 1px solid {RULE};
-    padding-top: .5rem; margin: 1.7rem 0 .5rem; }}
-  .model-h {{ font-family: Georgia, serif; font-weight: 700; font-size: 1.12rem; color: {INK};
-    border-bottom: 2px solid {ACCENT}; padding-bottom: .25rem; margin-bottom: .5rem; }}
-  .pick {{ border: 1px solid {RULE}; border-radius: 8px; padding: .6rem .7rem; margin-bottom: .55rem;
-    background: #FFFDF9; }}
-  .pick .rk {{ font-family: ui-monospace, monospace; color: {ACCENT}; font-weight: 700; font-size: .8rem; }}
-  .pick .sc {{ float: right; font-family: ui-monospace, monospace; font-size: .74rem; color: {MUTED};
-    border: 1px solid {RULE}; border-radius: 999px; padding: .02rem .45rem; }}
-  .pick .ti {{ font-family: Georgia, serif; font-weight: 600; font-size: .98rem; color: {INK};
-    line-height: 1.25; margin: .15rem 0 .1rem; }}
-  .pick .pub {{ font-size: .78rem; color: {ACCENT}; }}
-  .pick .ra {{ font-size: .84rem; color: {MUTED}; line-height: 1.35; margin-top: .3rem; }}
-  .note {{ color: {MUTED}; font-size: .9rem; }}
-  .gt {{ border: 1px solid {RULE}; border-left: 3px solid {ACCENT}; border-radius: 6px;
-    padding: .5rem .7rem; margin-bottom: .45rem; background: #FFFDF9; }}
-  .gt .d {{ font-family: ui-monospace, monospace; font-size: .72rem; color: {MUTED}; }}
-  .gt .h {{ font-family: Georgia, serif; font-weight: 600; color: {INK}; }}
-  .gt .st {{ float: right; font-family: ui-monospace, monospace; font-size: .72rem; }}
-  .miss {{ color: {MUTED}; }}  .hit {{ color: {ACCENT}; font-weight: 700; }}
-  .about p {{ color: {INK}; font-size: 1.0rem; line-height: 1.6; max-width: 68ch; }}
-  .about h2 {{ font-family: Georgia, serif; font-size: 1.6rem; color: {INK}; margin-bottom: .3rem; }}
+  [data-testid="stStatusWidget"], [data-testid="stHeader"],
+  [data-testid="stSidebar"], [data-testid="stSidebarCollapsedControl"] {{ display:none !important; }}
+  .stApp {{ background:{PAPER}; }}
+  .block-container, [data-testid="stMainBlockContainer"] {{
+    max-width:100% !important; padding:0 !important; margin:0 !important; }}
+  [data-testid="stMarkdownContainer"] {{ font-family:'PT Serif',Georgia,'Times New Roman',serif; }}
+
+  /* masthead */
+  .mast {{ background:{GREEN}; padding:26px 40px 20px 60px; position:relative; }}
+  .mast .wm {{ text-align:left; color:#111; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+    font-size:2.9rem; line-height:1; letter-spacing:.02em; }}
+  .mast .wm b {{ font-weight:800; }} .mast .wm span {{ font-weight:400; }}
+  .mast .tag {{ text-align:left; color:#111; font-family:'PT Sans','Helvetica Neue',Arial,sans-serif;
+    font-weight:700; font-size:.72rem; letter-spacing:.16em; margin-top:8px; }}
+
+  /* nav = editor toggle */
+  .nav {{ background:{NAVBG}; display:flex; justify-content:center; flex-wrap:wrap; }}
+  .navitem {{ color:#fff !important; font-family:'PT Sans','Helvetica Neue',Arial,sans-serif; font-weight:700;
+    font-size:.98rem; padding:15px 26px; text-decoration:none !important; border-left:1px solid #333; }}
+  .navitem:first-child {{ border-left:none; }}
+  .navitem:hover {{ color:{GREEN} !important; }}
+  .navitem.active {{ color:{GREEN} !important; }}
+
+  /* body layout: left sidebar + rule + main, hugging the left like MR */
+  .wrap {{ display:flex; max-width:1240px; margin:0; padding:0 30px; }}
+  .side {{ width:250px; flex:none; padding:36px 28px 40px 0; border-right:1px solid {RULE}; }}
+  .main {{ flex:1; max-width:730px; padding:36px 0 50px 44px; min-width:0; }}
+
+  /* sidebar widgets */
+  .side .mark {{ font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:1.5rem; color:#111;
+    letter-spacing:.01em; }}
+  .side .mark .m2 {{ font-weight:800; }} .side .mark .m1 {{ font-weight:400; }}
+  .side .sub {{ color:{MUTED}; font-size:.86rem; line-height:1.45; margin:.4rem 0 .9rem; }}
+  .side .gbtn {{ display:block; text-align:center; border:1px solid {GREEN}; color:{GREEN} !important;
+    background:#fff; border-radius:5px; padding:9px 12px; font-family:'PT Sans','Helvetica Neue',Arial,sans-serif;
+    font-weight:600; font-size:.86rem; text-decoration:none !important; margin-bottom:1.6rem; }}
+  .side .gbtn:hover {{ background:{GREEN}; color:#fff !important; }}
+  .side .wtitle {{ font-family:'PT Sans','Helvetica Neue',Arial,sans-serif; font-weight:700; font-size:.78rem;
+    text-transform:uppercase; letter-spacing:.1em; color:#222; border-bottom:1px solid {RULE};
+    padding-bottom:5px; margin:1.5rem 0 .7rem; }}
+  .side .wtext {{ color:#3a3a3a; font-size:.86rem; line-height:1.5; margin:0; }}
+  .side .res {{ font-size:.82rem; color:{INK}; line-height:1.35; margin-bottom:.55rem; }}
+  .side .res .rk {{ display:block; font-family:'PT Sans','Helvetica Neue',Arial,sans-serif; font-size:.7rem;
+    color:{MUTED}; }}
+  .side a {{ color:{LINK}; }}
+
+  /* post */
+  .ptitle {{ font-family:'PT Sans','Helvetica Neue',Arial,sans-serif; font-weight:700; font-size:1.9rem;
+    color:{INK}; margin:0 0 .35rem; }}
+  .byline {{ color:{INK}; font-size:1.02rem; margin:0 0 .3rem; }}
+  .byline .who {{ color:{LINK}; font-style:normal; }}
+  hr.short {{ border:none; border-top:1px solid {RULE}; width:130px; margin:.6rem 0 1.3rem; }}
+  ol.links {{ padding-left:1.7rem; margin:0; }}
+  ol.links li {{ font-size:1.2rem; line-height:1.45; color:{INK}; margin-bottom:1.5rem; }}
+  ol.links li a {{ color:{LINK}; text-decoration:underline; }}
+  ol.links .gloss {{ font-size:.86rem; color:{MUTED}; margin-top:.15rem; line-height:1.4; }}
+  ol.links .gloss .hit {{ color:{LINK}; }} ol.links .gloss .miss {{ color:#a06a2b; }}
+  ol.links .gloss .late {{ color:#5a6b8c; }} ol.links .gloss .incorp {{ color:#6b6b6b; }}
+  .method {{ margin-top:1.6rem; padding-top:1rem; border-top:1px solid {RULE}; color:{MUTED};
+    font-size:.92rem; line-height:1.5; }}
+  .empty {{ color:{MUTED}; font-style:italic; }}
+  .foot {{ border-top:1px solid {RULE}; text-align:center; padding:22px 20px 30px;
+    margin-top:8px; color:{MUTED}; font-family:'PT Sans','Helvetica Neue',Arial,sans-serif;
+    font-size:.88rem; }}
+  .foot a {{ color:{LINK}; }}
 </style>
-""", unsafe_allow_html=True)
 
-
-# --- header ---------------------------------------------------------------
-
-st.markdown(
-    '<div class="masthead"><div class="kicker">A live eval of machine taste'
-    f'&nbsp;&nbsp;·&nbsp;&nbsp;Data as of {pretty_date(latest_data_date())}</div>'
-    '<h1>Predicting Tyler</h1></div>'
-    '<div class="dek">Predicting Tyler is a daily test of whether a language model can '
-    'anticipate what Tyler Cowen links on Marginal Revolution. Tyler has previously '
-    'discussed <a href="https://marginalrevolution.com/marginalrevolution/2025/01/'
-    'should-you-be-writing-for-the-ais.html" target="_blank" rel="noopener">"writing for '
-    'the AIs"</a>. This turns that around: can the AIs model <i>him</i>? Each morning '
-    "several models see the same fresh material and guess what he'll pick. Then we grade "
-    'them against his real choices.</div>'
-    '<div class="more"><a href="#about">How this works</a></div>',
-    unsafe_allow_html=True)
-
-track_label = ui.tabs(list(TRACKS), default_value="Substack", key="track")
-track = TRACKS[track_label]
-run = latest_run(track, "v2.0") or latest_run(track)
-launch = launch_date(track)
-
-
-# --- today's picks (the models' predictions) ------------------------------
-
-st.markdown('<div class="section-rule">Today\'s picks</div>', unsafe_allow_html=True)
-
-if not run:
-    st.info("No ranking run yet for this track.")
-else:
-    ms = models_in(run["run_id"])
-    cols = st.columns(len(ms))
-    for col, m in zip(cols, ms):
-        with col:
-            st.markdown(f'<div class="model-h">{short(m)}</div>', unsafe_allow_html=True)
-            for p in picks(run["run_id"], m, limit=6):
-                title = (p["title"] or "").replace("<", "&lt;")
-                ra = (p["rationale"] or "").replace("<", "&lt;")
-                st.markdown(
-                    f'<div class="pick"><span class="rk">#{p["rank"]}</span>'
-                    f'<span class="sc">{p["score"]}</span>'
-                    f'<div class="ti">{title}</div>'
-                    f'<div class="pub">{p["publication"]}</div>'
-                    f'<div class="ra">{ra}</div></div>',
-                    unsafe_allow_html=True)
-    st.markdown(
-        f'<div class="note">Run <code>{run["run_id"]}</code> · prompt {run["prompt_version"]} '
-        f'· corpus {run["corpus_version"]} · {run["candidates_count"]} candidates.</div>',
-        unsafe_allow_html=True)
-
-
-# --- what Tyler actually links (ground truth, since launch) ----------------
-
-st.markdown('<div class="section-rule">What Tyler actually links</div>', unsafe_allow_html=True)
-
-actual = tyler_links_since(track, launch)
-if not actual:
-    st.markdown(
-        f'<div class="note">Tracking began {pretty_date(launch)}. As Tyler links a '
-        f'{track_label} item from here on, it appears here, marked in or out of corpus '
-        'and scored against the models above.</div>', unsafe_allow_html=True)
-else:
-    domains = corpus_domains()
-    n_hit = sum(1 for r in actual if r["match_type"] in ("exact", "content_match"))
-    st.markdown(
-        f'<div class="note">Since {pretty_date(launch)}, Tyler has linked <b>{len(actual)}</b> '
-        f'{track_label} item(s); <b>{n_hit}</b> scored against the models.</div>',
-        unsafe_allow_html=True)
-    for r in actual:
-        host, slug = url_label(r["canonical_url"])
-        if r["match_type"] in ("exact", "content_match"):
-            ranks = candidate_best_ranks(r["matched_candidate_id"])
-            rk = " · ".join(f"{short(x['model'])} #{x['r']}" for x in ranks) or "unranked"
-            status = f'<span class="st hit">✓ ranked — {rk}</span>'
-        elif host in domains:
-            status = '<span class="st miss">in corpus</span>'
-        else:
-            status = '<span class="st miss">outside the corpus</span>'
-        st.markdown(
-            f'<div class="gt">{status}<span class="d">{r["mr_post_date"]}</span> · '
-            f'<span class="h">{host}</span> <span class="miss">/ {slug[:60]}</span></div>',
-            unsafe_allow_html=True)
-
-
-# --- leaderboard (accruing) ----------------------------------------------
-
-st.markdown('<div class="section-rule">Leaderboard</div>', unsafe_allow_html=True)
-health = corpus_health(track)
-if health["hits"] == 0:
-    st.markdown(
-        '<div class="note">No scored opportunities yet. The leaderboard '
-        '(recall@20 / @50, MRR, and calibration per model) fills in as Tyler links '
-        f'candidates within the {("14" if track=="nber" else "7")}-day matching window.</div>',
-        unsafe_allow_html=True)
-else:
-    st.write("Coming online — hits recorded.")
-
-
-# --- corpus health --------------------------------------------------------
-
-st.markdown('<div class="section-rule">Corpus health</div>', unsafe_allow_html=True)
-st.markdown(
-    '<div class="note">The <b>corpus</b> is the fixed set of sources we watch — the pool '
-    'the models rank from each day. For Substack it\'s a frozen watchlist of every '
-    'publication Tyler has linked since 2022; for NBER it\'s the working-paper feed itself.</div>',
-    unsafe_allow_html=True)
-c1, c2, c3, c4 = st.columns(4)
-with c1:
-    ui.metric_card("Watchlist publications", str(health["publications"]),
-                   "frozen corpus v1.0", key="m1")
-with c2:
-    ui.metric_card(f"Candidates today · {track_label}", str(health["candidates"]),
-                   "ranked this run", key="m2")
-with c3:
-    ui.metric_card("Models", "3", "Opus · GPT · Kimi", key="m3")
-with c4:
-    ui.metric_card("Ground-truth hits", str(health["hits"]),
-                   "accruing as Tyler posts", key="m4")
-
-
-# --- about ----------------------------------------------------------------
-
-st.markdown("""
-<div class="about" id="about">
-<h2>How this works</h2>
-<p><b>Why only Substacks and NBER working papers?</b> Grading a prediction fairly means
-knowing the full set of things a model <i>could</i> have picked that day — and that set
-has to be one we can actually see. Substack feeds and NBER's working-paper listings are
-open and scrapable: no paywalls, no paid APIs, no login. Most of Tyler's other links —
-newspapers, journals, X — sit behind paywalls or have no clean, enumerable candidate
-pool, so we record them but don't score them. The constraint is access, not editorial
-preference.</p>
-
-<p><b>Why do the models read only the first ~900 words of each post?</b> Ideally they'd
-read every word. In practice, feeding the complete text of a full day's candidate pool
-overruns the context window of the smallest model in the lineup and runs up the bill.
-Capping each post at ~900 words keeps every model on equal footing at a workable cost.
-It's a design constraint, not an ideal.</p>
-
-<p><b>How scoring works.</b> This is a live, forward-looking eval. Each morning the
-models rank; over the following days, when Tyler posts, we check whether he linked
-anything they ranked, and how highly.</p>
-
-<p><b>How it was built.</b> We scraped roughly two decades of Marginal Revolution posts
-and every outbound link in them. From the links that pointed at Substack, we derived a
-watchlist of every Substack publication Tyler has linked since 2022. To capture what
-his taste actually is, we had Claude Fable read a
-broad, two-decade sample of his past roundups (his own framing of each link) and write a
-profile of his sensibilities, which each ranking model receives alongside the day's
-candidates. Each day the
-system polls those feeds (and NBER's) for new posts, has the
-models rank them, then matches Tyler's actual new links back against both the candidate
-pool and the predictions.</p>
+<div class="mast">
+  <div class="wm"><span>PREDICTING</span><b>TYLER</b></div>
+  <div class="tag">MARGINAL STEPS TOWARD PREDICTING TYLER COWEN</div>
 </div>
-""", unsafe_allow_html=True)
+<div class="nav">{nav}</div>
+<div class="wrap">
+  <aside class="side">{build_sidebar()}</aside>
+  <main class="main">{build_post()}</main>
+</div>
+<div class="foot">For feedback and recommendations, reach out to
+  <a href="mailto:humzah.b.khan@gmail.com">humzah.b.khan@gmail.com</a>.</div>
+""")
