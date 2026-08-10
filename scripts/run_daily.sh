@@ -17,6 +17,23 @@ PROJECT="/Users/humzahkhan/Projects/mr_eval"
 cd "$PROJECT" || exit 1
 echo "===== daily run $(date -u +%FT%TZ) ====="
 
+# Wait for real network before doing anything. launchd fires this at 9am even
+# if the Mac only just woke and wifi hasn't associated yet — a run started then
+# gets ~90% DNS failures (Errno 8), ranks a crippled pool, and fails to push.
+# Poll up to ~10 min; if still offline, skip cleanly rather than poison the data
+# or burn API budget. A skipped day is an honest gap; a degraded day is not.
+online() { /usr/bin/python3 -c "import socket; socket.setdefaulttimeout(5); socket.gethostbyname('marginalrevolution.com')" 2>/dev/null; }
+for i in $(seq 1 60); do
+  online && break
+  echo "[wait] no network yet (try $i/60), sleeping 10s…"
+  sleep 10
+done
+if ! online; then
+  echo "[wait] still offline after ~10 min — skipping this run (no degraded data)."
+  exit 0
+fi
+echo "[wait] network up — proceeding."
+
 # Secrets (OPENROUTER_API_KEY) from .env
 set -a; [ -f .env ] && source .env; set +a
 
