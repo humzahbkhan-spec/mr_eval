@@ -21,13 +21,24 @@
     <string>/Users/humzahkhan/Projects/mr_eval/scripts/run_daily.sh</string>
   </array>
 
-  <!-- 09:00 local time daily. If the Mac is asleep then, launchd runs it on
-       the next wake (StartCalendarInterval catches up a missed occurrence). -->
+  <!-- Fires at 09:00 local, then 09:10, then every 30 min through 12:40. The
+       runner does nothing once the day has already succeeded (a dated success
+       marker), so these are retries, not repeated runs: if 09:00 misses because
+       wifi wasn't up yet (or credits were briefly out), a later fire recovers
+       the day instead of losing it. If the Mac is asleep across these times,
+       launchd coalesces the missed fires into one run on wake. -->
   <key>StartCalendarInterval</key>
-  <dict>
-    <key>Hour</key><integer>9</integer>
-    <key>Minute</key><integer>0</integer>
-  </dict>
+  <array>
+    <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>10</integer></dict>
+    <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>40</integer></dict>
+    <dict><key>Hour</key><integer>10</integer><key>Minute</key><integer>10</integer></dict>
+    <dict><key>Hour</key><integer>10</integer><key>Minute</key><integer>40</integer></dict>
+    <dict><key>Hour</key><integer>11</integer><key>Minute</key><integer>10</integer></dict>
+    <dict><key>Hour</key><integer>11</integer><key>Minute</key><integer>40</integer></dict>
+    <dict><key>Hour</key><integer>12</integer><key>Minute</key><integer>10</integer></dict>
+    <dict><key>Hour</key><integer>12</integer><key>Minute</key><integer>40</integer></dict>
+  </array>
 
   <key>StandardOutPath</key>
   <string>/Users/humzahkhan/Projects/mr_eval/data/daily.launchd.log</string>

@@ -33,3 +33,6 @@ env/
 .DS_Store
 .vscode/
 .idea/
+
+# daily runner: per-day success marker (retry guard, local only)
+data/.last_success_date
